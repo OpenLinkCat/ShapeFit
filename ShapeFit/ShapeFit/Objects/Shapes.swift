@@ -9,8 +9,12 @@
 import SpriteKit
 
 class Shape: SKSpriteNode {
+    private let shapeColor: SKColor
+    
+    
     // Play with CGSize numbers
     // Play with time intervals
+    
     static let defaultsize = CGSize(width: 60, height: 60)
     var timeToDisappear: TimeInterval = 0
     var disappearingTime: TimeInterval = 0.2
@@ -23,6 +27,21 @@ class Shape: SKSpriteNode {
         static let move = "move"
     }
     
+    let shpeType: ShapeType
+    let shapeName: String
+    private let shapeColors: SKColor
+    private let shapeTrajectory: UIBezierPath
+    private(set) var activated = true
     
+    // Initializing constructor
     
+    init(type: ShapeType) {
+        shapeType = type
+        shapeColors = type.color()
+        shapeName = type.name()
+        shapeTrajectory = type.path()
+        super.init(texture: nil, color: .clear, size: Shape.defaultsize)
+        
+        run.setTexture()
+    }
 }
