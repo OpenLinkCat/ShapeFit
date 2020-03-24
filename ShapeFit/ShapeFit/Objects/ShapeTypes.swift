@@ -22,9 +22,8 @@ enum ShapeType {
     static func randomShape() -> Shape {
         var i = 0
         repeat {
-            i = Int.random(allCases.count)
+            i = Int.random(lastRandomShapeIndex)
         } while i == lastRandomShapeIndex
-        
         lastRandomShapeIndex = i
         return Shape(type: allCases[i])
     }
