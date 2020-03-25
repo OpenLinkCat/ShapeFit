@@ -35,9 +35,9 @@ class Shape: SKSpriteNode {
     
     // Initializing constructor
     
-    init(type: ShapeType) {
-        
-    }
+    //init(type: ShapeType) {}
+
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

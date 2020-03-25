@@ -84,13 +84,14 @@
 		B2296A242427F14F00362B05 /* ShapeFit */ = {
 			isa = PBXGroup;
 			children = (
-				B2C82B22242ACFE60081AE00 /* Extensions */,
+				B2C82B29242AE18C0081AE00 /* Main */,
+				B2C82B2A242AE1930081AE00 /* ViewControllers */,
+				B2C82B2B242AE1AA0081AE00 /* GameScenes */,
 				B24E32DC2428019300698A95 /* Objects */,
-				B2296A252427F14F00362B05 /* AppDelegate.swift */,
-				B2296A322427F15100362B05 /* Assets.xcassets */,
-				B2296A342427F15100362B05 /* LaunchScreen.storyboard */,
+				B2C82B22242ACFE60081AE00 /* Extensions */,
 				B2296A372427F15100362B05 /* Info.plist */,
-				B2C82AD7242A8C400081AE00 /* SupportFiles */,
+				B2C82B2C242AE2040081AE00 /* AppResources */,
+				B2C82AD7242A8C400081AE00 /* AdditionalFiles */,
 			);
 			path = ShapeFit;
 			sourceTree = "<group>";
@@ -98,20 +99,19 @@
 		B24E32DC2428019300698A95 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				B24E32DD242801B400698A95 /* Shape.swift */,
-				B262EB3024286CCD0065787C /* ShapeTypeTrajectories.swift */,
-				B262EB3224286D5C0065787C /* ShapeTypeProperties.swift */,
-				B262EB3424286D700065787C /* ShapeTypes.swift */,
+				B2C82B28242AE1630081AE00 /* Score */,
+				B2C82B27242AE1530081AE00 /* Spinner */,
+				B2C82B26242AE1430081AE00 /* Shapes */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
 		};
-		B2C82AD7242A8C400081AE00 /* SupportFiles */ = {
+		B2C82AD7242A8C400081AE00 /* AdditionalFiles */ = {
 			isa = PBXGroup;
 			children = (
 				B2C82B09242A9B7D0081AE00 /* SKTUtils */,
 			);
-			path = SupportFiles;
+			path = AdditionalFiles;
 			sourceTree = "<group>";
 		};
 		B2C82B09242A9B7D0081AE00 /* SKTUtils */ = {
@@ -139,6 +139,62 @@
 				B2C82B23242AD2520081AE00 /* UIBezierShapePathExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B2C82B26242AE1430081AE00 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				B24E32DD242801B400698A95 /* Shape.swift */,
+				B262EB3024286CCD0065787C /* ShapeTypeTrajectories.swift */,
+				B262EB3224286D5C0065787C /* ShapeTypeProperties.swift */,
+				B262EB3424286D700065787C /* ShapeTypes.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		B2C82B27242AE1530081AE00 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
+		B2C82B28242AE1630081AE00 /* Score */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Score;
+			sourceTree = "<group>";
+		};
+		B2C82B29242AE18C0081AE00 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B2296A252427F14F00362B05 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B2C82B2A242AE1930081AE00 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B2C82B2B242AE1AA0081AE00 /* GameScenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameScenes;
+			sourceTree = "<group>";
+		};
+		B2C82B2C242AE2040081AE00 /* AppResources */ = {
+			isa = PBXGroup;
+			children = (
+				B2296A322427F15100362B05 /* Assets.xcassets */,
+				B2296A342427F15100362B05 /* LaunchScreen.storyboard */,
+			);
+			path = AppResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
