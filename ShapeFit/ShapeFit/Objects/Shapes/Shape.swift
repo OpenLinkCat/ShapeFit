@@ -35,7 +35,7 @@ class Shape: SKSpriteNode {
     
     // Initializing constructor
     
-    //init(type: ShapeType) {}
+    init(type: ShapeType) {}
 
     
     

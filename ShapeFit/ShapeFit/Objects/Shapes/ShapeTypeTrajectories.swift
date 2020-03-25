@@ -11,7 +11,7 @@ import SpriteKit
 // TODO: Tweak all the numbers
 
 extension ShapeType {
-    
+    // MARK: Circle
     enum Circle {
         private static let radius: CGFloat = 40
         private static let percentage: CGFloat = 0.4
@@ -45,6 +45,7 @@ extension ShapeType {
         }
         
         // Creating a Border for the circle
+        
         static func createBorder(onTrajectory trajectory: UIBezierPath, size: CGSize) {
             let newRadius = radius * 1.05
             let inside = 2 * newRadius * 0.5
@@ -59,6 +60,8 @@ extension ShapeType {
             trajectory.addLine(to: CGPoint(x: size.width / 2, y: size.height / 2))
         }
     }
+    
+    // MARK: Triangle
     
     enum Triangle {
         private static let base: CGFloat = 80
@@ -91,6 +94,8 @@ extension ShapeType {
             return trajectory
         }
         
+        // Creating a Border for the Triangle
+        
         static func createBorder(onTrajectory trajectory: UIBezierPath, size: CGSize) {
             let vector1 = CGVector(dx: base, dy: height / 2)
             let vector2 = CGVector(angle: vector1.angle)
@@ -106,6 +111,8 @@ extension ShapeType {
         }
         
     }
+    
+    // MARK: Square
     
     enum Square {
         private static let length: CGFloat = 66
@@ -145,6 +152,8 @@ extension ShapeType {
         
     }
     
+    // MARK: Pentagon
+    
     enum Pentagon {
         private static let width: CGFloat = 82
         private static let percentage: CGFloat = 0.8
@@ -182,7 +191,7 @@ extension ShapeType {
             return trajectory
         }
         
-        static func drawBorder(onTrajectory trajectory: UIBezierPath, size: CGSize) {
+        static func createBorder(onTrajectory trajectory: UIBezierPath, size: CGSize) {
             
             // Pentagon with angles of 72 degrees can use 54 and 36 degree angles to find side lengths
             
@@ -193,11 +202,11 @@ extension ShapeType {
             let x = length * cos(angle36)
             let y = length * sin(angle36)
             let in1 = x - length / 2
-            let heightInside = totalHeight * percentage
             let centerHeight = tan(angle54) * length / 2
             let topHeight = (1 / cos(angle54)) * length / 2
             let help1 = topHeight - y
             let totalHeight = centerHeight + help1
+            let heightInside = totalHeight * percentage
             let in2 = in1 * percentage
             let open = 2 * in2 + length * 1.02
             

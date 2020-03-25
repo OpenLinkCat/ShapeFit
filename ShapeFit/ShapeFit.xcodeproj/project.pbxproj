@@ -14,6 +14,16 @@
 		B262EB3124286CCD0065787C /* ShapeTypeTrajectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3024286CCD0065787C /* ShapeTypeTrajectories.swift */; };
 		B262EB3324286D5C0065787C /* ShapeTypeProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3224286D5C0065787C /* ShapeTypeProperties.swift */; };
 		B262EB3524286D700065787C /* ShapeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3424286D700065787C /* ShapeTypes.swift */; };
+		B2AB0001242B0F6500F5E06A /* BuildMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AB0000242B0F6500F5E06A /* BuildMode.swift */; };
+		B2ABFFEF242B056D00F5E06A /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABFFEE242B056D00F5E06A /* Spinner.swift */; };
+		B2ABFFF1242B07D400F5E06A /* TextureExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABFFF0242B07D400F5E06A /* TextureExtension.swift */; };
+		B2ABFFF3242B080A00F5E06A /* ConfigureTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABFFF2242B080A00F5E06A /* ConfigureTexture.swift */; };
+		B2ABFFF5242B082000F5E06A /* TextureActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABFFF4242B082000F5E06A /* TextureActions.swift */; };
+		B2ABFFF7242B088300F5E06A /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABFFF6242B088200F5E06A /* AppColors.swift */; };
+		B2ABFFF9242B095000F5E06A /* AppCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABFFF8242B095000F5E06A /* AppCache.swift */; };
+		B2ABFFFB242B09FD00F5E06A /* RandomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABFFFA242B09FD00F5E06A /* RandomNumber.swift */; };
+		B2ABFFFD242B0CCE00F5E06A /* SpinnerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABFFFC242B0CCE00F5E06A /* SpinnerFunctions.swift */; };
+		B2ABFFFF242B0CEB00F5E06A /* Physics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABFFFE242B0CEB00F5E06A /* Physics.swift */; };
 		B2C82B16242A9B7D0081AE00 /* SKColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C82B0A242A9B7D0081AE00 /* SKColor+Extensions.swift */; };
 		B2C82B17242A9B7D0081AE00 /* CGVector+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C82B0B242A9B7D0081AE00 /* CGVector+Extensions.swift */; };
 		B2C82B18242A9B7D0081AE00 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C82B0C242A9B7D0081AE00 /* Int+Extensions.swift */; };
@@ -39,6 +49,16 @@
 		B262EB3024286CCD0065787C /* ShapeTypeTrajectories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypeTrajectories.swift; sourceTree = "<group>"; };
 		B262EB3224286D5C0065787C /* ShapeTypeProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypeProperties.swift; sourceTree = "<group>"; };
 		B262EB3424286D700065787C /* ShapeTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypes.swift; sourceTree = "<group>"; };
+		B2AB0000242B0F6500F5E06A /* BuildMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildMode.swift; sourceTree = "<group>"; };
+		B2ABFFEE242B056D00F5E06A /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		B2ABFFF0242B07D400F5E06A /* TextureExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureExtension.swift; sourceTree = "<group>"; };
+		B2ABFFF2242B080A00F5E06A /* ConfigureTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureTexture.swift; sourceTree = "<group>"; };
+		B2ABFFF4242B082000F5E06A /* TextureActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureActions.swift; sourceTree = "<group>"; };
+		B2ABFFF6242B088200F5E06A /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		B2ABFFF8242B095000F5E06A /* AppCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCache.swift; sourceTree = "<group>"; };
+		B2ABFFFA242B09FD00F5E06A /* RandomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumber.swift; sourceTree = "<group>"; };
+		B2ABFFFC242B0CCE00F5E06A /* SpinnerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerFunctions.swift; sourceTree = "<group>"; };
+		B2ABFFFE242B0CEB00F5E06A /* Physics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Physics.swift; sourceTree = "<group>"; };
 		B2C82B0A242A9B7D0081AE00 /* SKColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+Extensions.swift"; sourceTree = "<group>"; };
 		B2C82B0B242A9B7D0081AE00 /* CGVector+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+Extensions.swift"; sourceTree = "<group>"; };
 		B2C82B0C242A9B7D0081AE00 /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
@@ -102,6 +122,7 @@
 				B2C82B28242AE1630081AE00 /* Score */,
 				B2C82B27242AE1530081AE00 /* Spinner */,
 				B2C82B26242AE1430081AE00 /* Shapes */,
+				B2ABFFFE242B0CEB00F5E06A /* Physics.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -137,6 +158,10 @@
 			isa = PBXGroup;
 			children = (
 				B2C82B23242AD2520081AE00 /* UIBezierShapePathExtension.swift */,
+				B2ABFFF2242B080A00F5E06A /* ConfigureTexture.swift */,
+				B2ABFFF4242B082000F5E06A /* TextureActions.swift */,
+				B2ABFFF0242B07D400F5E06A /* TextureExtension.swift */,
+				B2ABFFFA242B09FD00F5E06A /* RandomNumber.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -155,6 +180,8 @@
 		B2C82B27242AE1530081AE00 /* Spinner */ = {
 			isa = PBXGroup;
 			children = (
+				B2ABFFEE242B056D00F5E06A /* Spinner.swift */,
+				B2ABFFFC242B0CCE00F5E06A /* SpinnerFunctions.swift */,
 			);
 			path = Spinner;
 			sourceTree = "<group>";
@@ -170,6 +197,9 @@
 			isa = PBXGroup;
 			children = (
 				B2296A252427F14F00362B05 /* AppDelegate.swift */,
+				B2ABFFF6242B088200F5E06A /* AppColors.swift */,
+				B2ABFFF8242B095000F5E06A /* AppCache.swift */,
+				B2AB0000242B0F6500F5E06A /* BuildMode.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -272,19 +302,29 @@
 				B2C82B19242A9B7D0081AE00 /* SKTTimingFunctions.swift in Sources */,
 				B2C82B17242A9B7D0081AE00 /* CGVector+Extensions.swift in Sources */,
 				B2C82B1D242A9B7D0081AE00 /* CGPoint+Extensions.swift in Sources */,
+				B2ABFFF7242B088300F5E06A /* AppColors.swift in Sources */,
 				B2C82B1B242A9B7D0081AE00 /* SKAction+SpecialEffects.swift in Sources */,
 				B2C82B1F242A9B7D0081AE00 /* SKTAudio.swift in Sources */,
+				B2ABFFEF242B056D00F5E06A /* Spinner.swift in Sources */,
 				B2C82B24242AD2520081AE00 /* UIBezierShapePathExtension.swift in Sources */,
 				B2C82B1C242A9B7D0081AE00 /* SKNode+Extensions.swift in Sources */,
+				B2AB0001242B0F6500F5E06A /* BuildMode.swift in Sources */,
 				B2C82B1E242A9B7D0081AE00 /* SKTEffects.swift in Sources */,
+				B2ABFFF5242B082000F5E06A /* TextureActions.swift in Sources */,
 				B2C82B16242A9B7D0081AE00 /* SKColor+Extensions.swift in Sources */,
+				B2ABFFF9242B095000F5E06A /* AppCache.swift in Sources */,
+				B2ABFFFD242B0CCE00F5E06A /* SpinnerFunctions.swift in Sources */,
 				B2296A262427F14F00362B05 /* AppDelegate.swift in Sources */,
 				B262EB3324286D5C0065787C /* ShapeTypeProperties.swift in Sources */,
+				B2ABFFFB242B09FD00F5E06A /* RandomNumber.swift in Sources */,
 				B2C82B18242A9B7D0081AE00 /* Int+Extensions.swift in Sources */,
+				B2ABFFF1242B07D400F5E06A /* TextureExtension.swift in Sources */,
 				B262EB3524286D700065787C /* ShapeTypes.swift in Sources */,
 				B2C82B21242A9B7D0081AE00 /* CGFloat+Extensions.swift in Sources */,
+				B2ABFFF3242B080A00F5E06A /* ConfigureTexture.swift in Sources */,
 				B2C82B20242A9B7D0081AE00 /* Vector3.swift in Sources */,
 				B24E32DE242801B400698A95 /* Shape.swift in Sources */,
+				B2ABFFFF242B0CEB00F5E06A /* Physics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

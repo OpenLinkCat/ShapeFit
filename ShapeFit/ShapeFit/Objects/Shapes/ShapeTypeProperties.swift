@@ -27,8 +27,6 @@ extension ShapeType {
         }
     }
     
-    
-    
     func trajectory() -> UIBezierPath {
         switch self{
         case .circle:
@@ -42,18 +40,6 @@ extension ShapeType {
         }
     }
     
-    func color() -> SKColor {
-    switch self {
-    case .pentagon:
-        return .blue
-    case .triangle:
-        return .green
-    case .square:
-        return .red
-    case .circle:
-        return .yellow
-    }
-        
     func path() -> UIBezierPath {
         switch self {
         case .circle:
@@ -80,7 +66,7 @@ extension ShapeType {
         }
     }
     
-    func drawBorder(onPath path: UIBezierPath, size: CGSize) {
+    func createBorder(onPath path: UIBezierPath, size: CGSize) {
         switch self {
         case .circle:
             Circle.createBorder(onTrajectory: path, size: size)
@@ -93,6 +79,19 @@ extension ShapeType {
         }
     }
     
+    // Keep func color() at the bottom since it stops the rest of the code from executing
     
+    func color() -> SKColor {
+        switch self {
+        case .pentagon:
+            return .blue
+        case .triangle:
+            return .green
+        case .square:
+            return .red
+        case .circle:
+            return .yellow
+        }
+        
     }
 }
