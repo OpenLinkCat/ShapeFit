@@ -14,7 +14,10 @@
 		B262EB3124286CCD0065787C /* ShapeTypeTrajectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3024286CCD0065787C /* ShapeTypeTrajectories.swift */; };
 		B262EB3324286D5C0065787C /* ShapeTypeProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3224286D5C0065787C /* ShapeTypeProperties.swift */; };
 		B262EB3524286D700065787C /* ShapeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3424286D700065787C /* ShapeTypes.swift */; };
+		B2A4A799242BCA15004E9BB1 /* MainGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A4A798242BCA15004E9BB1 /* MainGameViewController.swift */; };
+		B2A4A79B242BCA50004E9BB1 /* UIViewResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A4A79A242BCA50004E9BB1 /* UIViewResize.swift */; };
 		B2AB0001242B0F6500F5E06A /* BuildMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AB0000242B0F6500F5E06A /* BuildMode.swift */; };
+		B2AB0003242B14F700F5E06A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AB0002242B14F700F5E06A /* UIImageExtension.swift */; };
 		B2ABFFEF242B056D00F5E06A /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABFFEE242B056D00F5E06A /* Spinner.swift */; };
 		B2ABFFF1242B07D400F5E06A /* TextureExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABFFF0242B07D400F5E06A /* TextureExtension.swift */; };
 		B2ABFFF3242B080A00F5E06A /* ConfigureTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ABFFF2242B080A00F5E06A /* ConfigureTexture.swift */; };
@@ -49,7 +52,10 @@
 		B262EB3024286CCD0065787C /* ShapeTypeTrajectories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypeTrajectories.swift; sourceTree = "<group>"; };
 		B262EB3224286D5C0065787C /* ShapeTypeProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypeProperties.swift; sourceTree = "<group>"; };
 		B262EB3424286D700065787C /* ShapeTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypes.swift; sourceTree = "<group>"; };
+		B2A4A798242BCA15004E9BB1 /* MainGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameViewController.swift; sourceTree = "<group>"; };
+		B2A4A79A242BCA50004E9BB1 /* UIViewResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewResize.swift; sourceTree = "<group>"; };
 		B2AB0000242B0F6500F5E06A /* BuildMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildMode.swift; sourceTree = "<group>"; };
+		B2AB0002242B14F700F5E06A /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		B2ABFFEE242B056D00F5E06A /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		B2ABFFF0242B07D400F5E06A /* TextureExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureExtension.swift; sourceTree = "<group>"; };
 		B2ABFFF2242B080A00F5E06A /* ConfigureTexture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureTexture.swift; sourceTree = "<group>"; };
@@ -127,6 +133,13 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
+		B2AB0004242B18DC00F5E06A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		B2C82AD7242A8C400081AE00 /* AdditionalFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +175,8 @@
 				B2ABFFF4242B082000F5E06A /* TextureActions.swift */,
 				B2ABFFF0242B07D400F5E06A /* TextureExtension.swift */,
 				B2ABFFFA242B09FD00F5E06A /* RandomNumber.swift */,
+				B2AB0002242B14F700F5E06A /* UIImageExtension.swift */,
+				B2A4A79A242BCA50004E9BB1 /* UIViewResize.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,6 +222,7 @@
 		B2C82B2A242AE1930081AE00 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B2A4A798242BCA15004E9BB1 /* MainGameViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -221,6 +237,7 @@
 		B2C82B2C242AE2040081AE00 /* AppResources */ = {
 			isa = PBXGroup;
 			children = (
+				B2AB0004242B18DC00F5E06A /* Sounds */,
 				B2296A322427F15100362B05 /* Assets.xcassets */,
 				B2296A342427F15100362B05 /* LaunchScreen.storyboard */,
 			);
@@ -305,6 +322,7 @@
 				B2ABFFF7242B088300F5E06A /* AppColors.swift in Sources */,
 				B2C82B1B242A9B7D0081AE00 /* SKAction+SpecialEffects.swift in Sources */,
 				B2C82B1F242A9B7D0081AE00 /* SKTAudio.swift in Sources */,
+				B2A4A79B242BCA50004E9BB1 /* UIViewResize.swift in Sources */,
 				B2ABFFEF242B056D00F5E06A /* Spinner.swift in Sources */,
 				B2C82B24242AD2520081AE00 /* UIBezierShapePathExtension.swift in Sources */,
 				B2C82B1C242A9B7D0081AE00 /* SKNode+Extensions.swift in Sources */,
@@ -312,10 +330,12 @@
 				B2C82B1E242A9B7D0081AE00 /* SKTEffects.swift in Sources */,
 				B2ABFFF5242B082000F5E06A /* TextureActions.swift in Sources */,
 				B2C82B16242A9B7D0081AE00 /* SKColor+Extensions.swift in Sources */,
+				B2A4A799242BCA15004E9BB1 /* MainGameViewController.swift in Sources */,
 				B2ABFFF9242B095000F5E06A /* AppCache.swift in Sources */,
 				B2ABFFFD242B0CCE00F5E06A /* SpinnerFunctions.swift in Sources */,
 				B2296A262427F14F00362B05 /* AppDelegate.swift in Sources */,
 				B262EB3324286D5C0065787C /* ShapeTypeProperties.swift in Sources */,
+				B2AB0003242B14F700F5E06A /* UIImageExtension.swift in Sources */,
 				B2ABFFFB242B09FD00F5E06A /* RandomNumber.swift in Sources */,
 				B2C82B18242A9B7D0081AE00 /* Int+Extensions.swift in Sources */,
 				B2ABFFF1242B07D400F5E06A /* TextureExtension.swift in Sources */,

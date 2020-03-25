@@ -15,7 +15,7 @@ class Shape: SKSpriteNode {
     // Play with CGSize numbers
     // Play with time intervals
     
-    static let defaultsize = CGSize(width: 60, height: 60)
+    static let defaultSize = CGSize(width: 60, height: 60)
     var timeToDisappear: TimeInterval = 0
     var disappearingTime: TimeInterval = 0.2
     var moveTime: TimeInterval = 0.5
@@ -35,7 +35,22 @@ class Shape: SKSpriteNode {
     
     // Initializing constructor
     
-    init(type: ShapeType) {}
+    init(type: ShapeType) {
+        shapeName = type.name()
+        shapeTrajectory = type.trajectory()
+        shapeType = type
+        shapeColors = type.color()
+        super.init(texture: nil, color: .clear, size: Shape.defaultSize)
+        
+        run(.setTexture(AppCache.instance.mainAtlas.textureNamed(type.textureName()), resize: true))
+
+        if BUILD_MODE == .debug {
+            let mark = SKSpriteNode(color: .white, size: CGSize(width: 4, height: 4))
+            mark.zPosition = 10
+            mark.position = .zero
+            addChild(mark)
+        }
+    }
 
     
     

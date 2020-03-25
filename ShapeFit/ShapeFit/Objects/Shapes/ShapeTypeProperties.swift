@@ -8,8 +8,6 @@
 
 import SpriteKit
 
-// MARK: Will get fixed once all shape enums are completed!!
-
 extension ShapeType {
     
     // Store the name of the shape as a String
@@ -40,16 +38,16 @@ extension ShapeType {
         }
     }
     
-    func path() -> UIBezierPath {
+    func textureName() -> String {
         switch self {
         case .circle:
-            return Circle.trajectory()
+            return "shape_circle"
         case .triangle:
-            return Triangle.trajectory()
+            return "shape_triangle"
         case .square:
-            return Square.trajectory()
+            return "shape_square"
         case .pentagon:
-            return Pentagon.trajectory()
+            return "shape_pentagon"
         }
     }
     
