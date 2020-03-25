@@ -26,6 +26,7 @@
 		B2C82B1F242A9B7D0081AE00 /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C82B13242A9B7D0081AE00 /* SKTAudio.swift */; };
 		B2C82B20242A9B7D0081AE00 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C82B14242A9B7D0081AE00 /* Vector3.swift */; };
 		B2C82B21242A9B7D0081AE00 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C82B15242A9B7D0081AE00 /* CGFloat+Extensions.swift */; };
+		B2C82B24242AD2520081AE00 /* UIBezierShapePathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C82B23242AD2520081AE00 /* UIBezierShapePathExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		B2C82B13242A9B7D0081AE00 /* SKTAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
 		B2C82B14242A9B7D0081AE00 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		B2C82B15242A9B7D0081AE00 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		B2C82B23242AD2520081AE00 /* UIBezierShapePathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierShapePathExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		B2296A242427F14F00362B05 /* ShapeFit */ = {
 			isa = PBXGroup;
 			children = (
+				B2C82B22242ACFE60081AE00 /* Extensions */,
 				B24E32DC2428019300698A95 /* Objects */,
 				B2296A252427F14F00362B05 /* AppDelegate.swift */,
 				B2296A322427F15100362B05 /* Assets.xcassets */,
@@ -128,6 +131,14 @@
 				B2C82B15242A9B7D0081AE00 /* CGFloat+Extensions.swift */,
 			);
 			path = SKTUtils;
+			sourceTree = "<group>";
+		};
+		B2C82B22242ACFE60081AE00 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2C82B23242AD2520081AE00 /* UIBezierShapePathExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 				B2C82B1D242A9B7D0081AE00 /* CGPoint+Extensions.swift in Sources */,
 				B2C82B1B242A9B7D0081AE00 /* SKAction+SpecialEffects.swift in Sources */,
 				B2C82B1F242A9B7D0081AE00 /* SKTAudio.swift in Sources */,
+				B2C82B24242AD2520081AE00 /* UIBezierShapePathExtension.swift in Sources */,
 				B2C82B1C242A9B7D0081AE00 /* SKNode+Extensions.swift in Sources */,
 				B2C82B1E242A9B7D0081AE00 /* SKTEffects.swift in Sources */,
 				B2C82B16242A9B7D0081AE00 /* SKColor+Extensions.swift in Sources */,

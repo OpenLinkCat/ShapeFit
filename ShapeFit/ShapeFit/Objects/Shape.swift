@@ -27,7 +27,7 @@ class Shape: SKSpriteNode {
         static let move = "move"
     }
     
-    let shpeType: ShapeType
+    let shapeType: ShapeType
     let shapeName: String
     private let shapeColors: SKColor
     private let shapeTrajectory: UIBezierPath
@@ -36,12 +36,10 @@ class Shape: SKSpriteNode {
     // Initializing constructor
     
     init(type: ShapeType) {
-        shapeType = type
-        shapeColors = type.color()
-        shapeName = type.name()
-        shapeTrajectory = type.path()
-        super.init(texture: nil, color: .clear, size: Shape.defaultsize)
         
-        run.setTexture()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
