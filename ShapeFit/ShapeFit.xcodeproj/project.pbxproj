@@ -45,7 +45,22 @@
 		B2C82B20242A9B7D0081AE00 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C82B14242A9B7D0081AE00 /* Vector3.swift */; };
 		B2C82B21242A9B7D0081AE00 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C82B15242A9B7D0081AE00 /* CGFloat+Extensions.swift */; };
 		B2C82B24242AD2520081AE00 /* UIBezierShapePathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C82B23242AD2520081AE00 /* UIBezierShapePathExtension.swift */; };
+		B2CCABA7242C373400B09164 /* IntialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABA6242C373400B09164 /* IntialScene.swift */; };
+		B2CCABA9242C381D00B09164 /* SoundExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABA8242C381D00B09164 /* SoundExtension.swift */; };
+		B2CCABAB242C38BB00B09164 /* DisappearandAppearExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABAA242C38BB00B09164 /* DisappearandAppearExtension.swift */; };
+		B2CCABAE242C392100B09164 /* GCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABAD242C392100B09164 /* GCHelper.swift */; };
+		B2CCABD1242C3D7F00B09164 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2CCABCA242C3D7F00B09164 /* Info.plist */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2CCABCF242C3D7F00B09164 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2CCABCB242C3D7F00B09164 /* SpriteKitExtensions.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B2CCABBC242C3CC500B09164;
+			remoteInfo = SpriteKitExtensions;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B2296A222427F14F00362B05 /* ShapeFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +103,14 @@
 		B2C82B14242A9B7D0081AE00 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		B2C82B15242A9B7D0081AE00 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		B2C82B23242AD2520081AE00 /* UIBezierShapePathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierShapePathExtension.swift; sourceTree = "<group>"; };
+		B2CCABA6242C373400B09164 /* IntialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntialScene.swift; sourceTree = "<group>"; };
+		B2CCABA8242C381D00B09164 /* SoundExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundExtension.swift; sourceTree = "<group>"; };
+		B2CCABAA242C38BB00B09164 /* DisappearandAppearExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisappearandAppearExtension.swift; sourceTree = "<group>"; };
+		B2CCABAD242C392100B09164 /* GCHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCHelper.swift; sourceTree = "<group>"; };
+		B2CCABAF242C397800B09164 /* App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2CCABC9242C3D7F00B09164 /* SpriteKitExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteKitExtensions.h; sourceTree = "<group>"; };
+		B2CCABCA242C3D7F00B09164 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2CCABCB242C3D7F00B09164 /* SpriteKitExtensions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SpriteKitExtensions.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +184,8 @@
 		B2C82AD7242A8C400081AE00 /* AdditionalFiles */ = {
 			isa = PBXGroup;
 			children = (
+				B2CCABC7242C3D7F00B09164 /* SpriteKitExtensions */,
+				B2CCABAC242C390800B09164 /* GCHelper */,
 				B2A4A79E242BD122004E9BB1 /* UpdateTimer */,
 				B2C82B09242A9B7D0081AE00 /* SKTUtils */,
 			);
@@ -198,6 +223,8 @@
 				B2A4A79A242BCA50004E9BB1 /* UIViewResize.swift */,
 				B2A4A79C242BCBFF004E9BB1 /* Doubles+Floats.swift */,
 				B2A4A7A1242BD1B2004E9BB1 /* DelayinTimer.swift */,
+				B2CCABA8242C381D00B09164 /* SoundExtension.swift */,
+				B2CCABAA242C38BB00B09164 /* DisappearandAppearExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -253,6 +280,7 @@
 		B2C82B2B242AE1AA0081AE00 /* GameScenes */ = {
 			isa = PBXGroup;
 			children = (
+				B2CCABA6242C373400B09164 /* IntialScene.swift */,
 			);
 			path = GameScenes;
 			sourceTree = "<group>";
@@ -265,6 +293,57 @@
 				B2296A342427F15100362B05 /* LaunchScreen.storyboard */,
 			);
 			path = AppResources;
+			sourceTree = "<group>";
+		};
+		B2CCABAC242C390800B09164 /* GCHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B2CCABAD242C392100B09164 /* GCHelper.swift */,
+				B2CCABAF242C397800B09164 /* App-Bridging-Header.h */,
+			);
+			path = GCHelper;
+			sourceTree = "<group>";
+		};
+		B2CCABC7242C3D7F00B09164 /* SpriteKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2CCABC8242C3D7F00B09164 /* SpriteKitExtensions */,
+				B2CCABCB242C3D7F00B09164 /* SpriteKitExtensions.xcodeproj */,
+			);
+			path = SpriteKitExtensions;
+			sourceTree = "<group>";
+		};
+		B2CCABC8242C3D7F00B09164 /* SpriteKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2CCABD5242C3DE400B09164 /* Layout */,
+				B2CCABD4242C3DDC00B09164 /* Controls */,
+				B2CCABC9242C3D7F00B09164 /* SpriteKitExtensions.h */,
+				B2CCABCA242C3D7F00B09164 /* Info.plist */,
+			);
+			path = SpriteKitExtensions;
+			sourceTree = "<group>";
+		};
+		B2CCABCC242C3D7F00B09164 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2CCABD0242C3D7F00B09164 /* SpriteKitExtensions.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2CCABD4242C3DDC00B09164 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		B2CCABD5242C3DE400B09164 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +392,12 @@
 			mainGroup = B2296A192427F14F00362B05;
 			productRefGroup = B2296A232427F14F00362B05 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B2CCABCC242C3D7F00B09164 /* Products */;
+					ProjectRef = B2CCABCB242C3D7F00B09164 /* SpriteKitExtensions.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B2296A212427F14F00362B05 /* ShapeFit */,
@@ -320,11 +405,22 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		B2CCABD0242C3D7F00B09164 /* SpriteKitExtensions.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SpriteKitExtensions.framework;
+			remoteRef = B2CCABCF242C3D7F00B09164 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		B2296A202427F14F00362B05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CCABD1242C3D7F00B09164 /* Info.plist in Resources */,
 				B2A4A7A8242BD29B004E9BB1 /* Screen.xib in Resources */,
 				B2296A332427F15100362B05 /* Assets.xcassets in Resources */,
 				B2296A362427F15100362B05 /* LaunchScreen.storyboard in Resources */,
@@ -345,8 +441,10 @@
 				B2C82B1D242A9B7D0081AE00 /* CGPoint+Extensions.swift in Sources */,
 				B2A4A7A0242BD131004E9BB1 /* UpdateTimer.swift in Sources */,
 				B2ABFFF7242B088300F5E06A /* AppColors.swift in Sources */,
+				B2CCABA7242C373400B09164 /* IntialScene.swift in Sources */,
 				B2A4A7AA242BD2A7004E9BB1 /* ScreenViewController.swift in Sources */,
 				B2C82B1B242A9B7D0081AE00 /* SKAction+SpecialEffects.swift in Sources */,
+				B2CCABAB242C38BB00B09164 /* DisappearandAppearExtension.swift in Sources */,
 				B2C82B1F242A9B7D0081AE00 /* SKTAudio.swift in Sources */,
 				B2A4A79B242BCA50004E9BB1 /* UIViewResize.swift in Sources */,
 				B2ABFFEF242B056D00F5E06A /* Spinner.swift in Sources */,
@@ -357,6 +455,7 @@
 				B2ABFFF5242B082000F5E06A /* TextureActions.swift in Sources */,
 				B2C82B16242A9B7D0081AE00 /* SKColor+Extensions.swift in Sources */,
 				B2A4A799242BCA15004E9BB1 /* MainGameViewController.swift in Sources */,
+				B2CCABAE242C392100B09164 /* GCHelper.swift in Sources */,
 				B2A4A7A2242BD1B2004E9BB1 /* DelayinTimer.swift in Sources */,
 				B2A4A79D242BCBFF004E9BB1 /* Doubles+Floats.swift in Sources */,
 				B2ABFFF9242B095000F5E06A /* AppCache.swift in Sources */,
@@ -364,6 +463,7 @@
 				B2296A262427F14F00362B05 /* AppDelegate.swift in Sources */,
 				B262EB3324286D5C0065787C /* ShapeTypeProperties.swift in Sources */,
 				B2AB0003242B14F700F5E06A /* UIImageExtension.swift in Sources */,
+				B2CCABA9242C381D00B09164 /* SoundExtension.swift in Sources */,
 				B2ABFFFB242B09FD00F5E06A /* RandomNumber.swift in Sources */,
 				B2C82B18242A9B7D0081AE00 /* Int+Extensions.swift in Sources */,
 				B2ABFFF1242B07D400F5E06A /* TextureExtension.swift in Sources */,
