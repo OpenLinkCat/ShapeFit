@@ -245,7 +245,7 @@ open class Control: SKNode {
     }
     
     
-    open func setGeneralPressProperties(_ changes: (_ node: SKNode)->()) {
+    open func setGeneralTouchProperties(_ changes: (_ node: SKNode)->()) {
         if generalSprite != nil {
             changes(generalSprite)
         } else if generalShape != nil {
@@ -285,24 +285,24 @@ open class Control: SKNode {
     public static var defaultSoundEffectsEnabled: Bool? = nil
     open var soundEffectsEnabled: Bool = true
     
-    public static var defaultPressDownSoundFileName: String? {
-        didSet { soundPreLoad(defaultPressDownSoundFileName) }
+    public static var defaultTouchDownSoundFileName: String? {
+        didSet { soundPreLoad(defaultTouchDownSoundFileName) }
     }
-    public static var defaultPressUpSoundFileName: String? {
-        didSet { soundPreLoad(defaultPressUpSoundFileName) }
+    public static var defaultTouchUpSoundFileName: String? {
+        didSet { soundPreLoad(defaultTouchUpSoundFileName) }
     }
-    public static var defaultDisabledPressDownFileName: String? {
-        didSet { soundPreLoad(defaultDisabledPressDownFileName) }
+    public static var defaultDisabledTouchDownFileName: String? {
+        didSet { soundPreLoad(defaultDisabledTouchDownFileName) }
     }
     
-    open var pressDownSoundFileName: String? {
-        didSet { Control.soundPreLoad(pressDownSoundFileName) }
+    open var touchDownSoundFileName: String? {
+        didSet { Control.soundPreLoad(touchDownSoundFileName) }
     }
-    open var pressUpSoundFileName: String? {
-        didSet { Control.soundPreLoad(pressUpSoundFileName) }
+    open var touchUpSoundFileName: String? {
+        didSet { Control.soundPreLoad(touchUpSoundFileName) }
     }
-    open var disabledPRessDownFileName: String? {
-        didSet { Control.soundPreLoad(disabledPressDownFileName) }
+    open var disabledTouchDownFileName: String? {
+        didSet { Control.soundPreLoad(disabledTouchDownFileName) }
     }
     
     fileprivate static func soundPreLoad(_ named: String?) {
@@ -504,8 +504,8 @@ open class Control: SKNode {
     fileprivate var state: ControlState = .normal { didSet { lastState = oldValue } }
     fileprivate var lastState: ControlState = .normal
     internal var eventClosures: [(event: ControlEvent, closure: (Control) -> ())] = []
-    fileprivate var press:UITouch?
-    fileprivate var pressLocationLast: CGPoint?
+    fileprivate var touch:UITouch?
+    fileprivate var touchLocationLast: CGPoint?
     fileprivate var moved = false
 
     // MARK: Control Functionality
@@ -723,42 +723,42 @@ open class Control: SKNode {
     
     // MARK: Control Events
     
-    internal func pressDown() {
-        playSound(instanceSoundFileName: pressDownSoundFileName, defaultSoundFileName: Control.defaultPressDownSoundFileName)
-        executeClosures(of: .pressDown)
+    internal func touchDown() {
+        playSound(instanceSoundFileName: touchDownSoundFileName, defaultSoundFileName: Control.defaultTouchDownSoundFileName)
+        executeClosures(of: .touchDown)
     }
     
-    internal func disabledPressDown() {
-        playSound(instanceSoundFileName: disabledPressDownFileName, defaultSoundFileName: Control.defaultDisabledPressDownFileName)
-        executeClosures(of: .disabledPressDown)
+    internal func disabledTouchDown() {
+        playSound(instanceSoundFileName: disabledTouchDownFileName, defaultSoundFileName: Control.defaultDisabledTouchDownFileName)
+        executeClosures(of: .disabledTouchDown)
     }
     
     internal func drag() {}
     
     internal func dragExit() {
-        executeClosures(of: .pressDragExit)
+        executeClosures(of: .touchDragExit)
     }
 
     internal func dragOutside() {
-        executeClosures(of: .pressDragOutside)
+        executeClosures(of: .touchDragOutside)
     }
     
     internal func dragEnter() {
-        executeClosures(of: .pressDragEnter)
+        executeClosures(of: .touchDragEnter)
     }
     
     internal func dragInside() {
-        executeClosures(of: .pressDragInside)
+        executeClosures(of: .touchDragInside)
     }
 
-    open func pressUpInside() {
-        executeClosures(of: .pressUpInside)
-        playSound(instanceSoundFileName: pressUpSoundFileName, defaultSoundFileName: Control.defaultPRessUpSoundFileName)
+    open func touchUpInside() {
+        executeClosures(of: .touchUpInside)
+        playSound(instanceSoundFileName: touchUpSoundFileName, defaultSoundFileName: Control.defaultTouchUpSoundFileName)
     }
     
-    internal func pressUpOutside() {
-        executeClosures(of: .pressUpOutside)
-        playSound(instanceSoundFileName: pressUpSoundFileName, defaultSoundFileName: Control.defaultPressUpSoundFileName)
+    internal func touchUpOutside() {
+        executeClosures(of: .touchUpOutside)
+        playSound(instanceSoundFileName: touchUpSoundFileName, defaultSoundFileName: Control.defaultTouchUpSoundFileName)
     }
     
     
@@ -769,70 +769,70 @@ open class Control: SKNode {
 
     // MARK: UIResponder Methods
     
-    override open func pressesBegan(_ presses: Set<UITouch>, with event: UIEvent?) {
-        let press = presses.first!
-        let pressPoint = press.location(in: self.genericNode.parent!)
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first!
+        let touchPoint = touch.location(in: self.genericNode.parent!)
 
-        if self.genericNode.contains(pressPoint) {
-            self.press = press
-            self.pressLocationLast = pressPoint
+        if self.genericNode.contains(touchPoint) {
+            self.touch = touch
+            self.touchLocationLast = touchPoint
             if self.state == .disabled {
-                disabledPressDown()
+                disabledTouchDown()
             } else {
-                pressDown()
+                touchDown()
             }
         }
     }
     
     
-    override open func pressesMoved(_ presses: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.state == .disabled { return }
-        let press = presses.first!
-        let pressPoint = press.location(in: self.genericNode.parent!)
+        let touch = touches.first!
+        let touchPoint = touch.location(in: self.genericNode.parent!)
         
         drag()
         
         self.moved = true
-        if self.genericNode.contains(pressPoint) {
+        if self.genericNode.contains(touchPoint) {
             // Inside
-            if let lastPoint = self.pressLocationLast , self.genericNode.contains(lastPoint) {
+            if let lastPoint = self.touchLocationLast , self.genericNode.contains(lastPoint) {
                 dragInside()
             } else {
                 self.dragEnter()
             }
         } else {
             // Outside
-            if let lastPoint = self.pressLocationLast , self.genericNode.contains(lastPoint) {
+            if let lastPoint = self.touchLocationLast , self.genericNode.contains(lastPoint) {
                 dragExit()
             } else {
                 dragOutside()
             }
         }
-        self.pressLocationLast = pressPoint
+        self.touchLocationLast = touchPoint
     }
     
     
-    override open func pressesEnded(_ presses: Set<UITouch>, with event: UIEvent?) {
-        endedPress()
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        endedTouch()
     }
     
-    override open func pressesCancelled(_ presses: Set<UITouch>, with event: UIEvent?) {
-        endedPress()
+    override open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        endedTouch()
     }
     
-    fileprivate func endedPress() {
+    fileprivate func endedTouch() {
         if self.state == .disabled { return }
         
         if self.moved {
-            if let lastPoint = self.pressLocationLast , self.genericNode.contains(lastPoint) {
+            if let lastPoint = self.touchLocationLast , self.genericNode.contains(lastPoint) {
                 // Ended inside
-                pressUpInside()
+                touchUpInside()
             } else {
                 // Ended outside
-                pressUpOutside()
+                touchUpOutside()
             }
         } else {
-            pressUpInside()
+            touchUpInside()
         }
         self.moved = false
     }

@@ -44,13 +44,13 @@ open class Switch: Control {
     
     // MARK: Switch Events
     
-    internal override func pressDown() {
+    internal override func touchDown() {
         self.highlighted = true
-        super.pressDown()
+        super.touchDown()
     }
     
-    internal override func disabledPressDown() {
-        super.disabledPressDown()
+    internal override func disabledTouchDown() {
+        super.disabledTouchDown()
     }
     
     internal override func drag() {
@@ -77,14 +77,14 @@ open class Switch: Control {
     
     // SHOULDN'T BE PUBLIC
     
-    open override func pressUpInside() {
+    open override func touchUpInside() {
         selectedStateMemory = !selectedStateMemory
         self.selected = selectedStateMemory
-        super.pressUpInside()
+        super.touchUpInside()
     }
     
-    internal override func pressUpOutside() {
-        super.pressUpOutside()
+    internal override func touchUpOutside() {
+        super.touchUpOutside()
     }
 
 }

@@ -8,7 +8,6 @@
 
 import SpriteKit
 
-
 open class StackNode: SKSpriteNode {
     open private(set) var fillMode: FillMode = FillMode.vertical
     open private(set) var subNodes: [SKNode] = []

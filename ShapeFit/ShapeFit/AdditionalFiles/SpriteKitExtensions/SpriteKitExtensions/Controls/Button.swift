@@ -27,13 +27,13 @@ open class Button: Control {
     }
 
     
-    internal override func pressDown() {
+    internal override func touchDown() {
         self.highlighted = true
-        super.pressDown()
+        super.touchDown()
     }
     
-    internal override func disabledPressDown() {
-        super.disabledPressDown()
+    internal override func disabledTouchDown() {
+        super.disabledTouchDown()
     }
     
     internal override func drag() {
@@ -58,12 +58,12 @@ open class Button: Control {
         super.dragInside()
     }
     
-    open override func pressUpInside() {
+    open override func touchUpInside() {
         self.highlighted = false
-        super.pressUpInside()
+        super.touchUpInside()
     }
     
-    internal override func pressUpOutside() {
-        super.pressUpOutside()
+    internal override func touchUpOutside() {
+        super.touchUpOutside()
     }
 }

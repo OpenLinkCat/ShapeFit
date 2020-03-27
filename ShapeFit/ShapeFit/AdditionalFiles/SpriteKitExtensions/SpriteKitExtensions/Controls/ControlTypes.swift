@@ -12,16 +12,16 @@ public extension Control {
     
     enum ControlEvent {
         
-        case pressDown
-        case pressUpInside
-        case pressUpOutside
-        case pressCancel
-        case pressDragExit
-        case pressDragOutside
-        case pressDragEnter
-        case pressDragInside
+        case touchDown
+        case touchUpInside
+        case touchUpOutside
+        case touchCancel
+        case touchDragExit
+        case touchDragOutside
+        case touchDragEnter
+        case touchDragInside
         case valueChanged 
-        case disabledPressDown
+        case disabledTouchDown
     }
     
     internal enum ControlState {
@@ -52,41 +52,41 @@ public extension Control {
     
     internal class ShapeNode: SKShapeNode {
         weak var control: Control?
-        override func pressesBegan(_ presses: Set<UITouch>, with event: UIEvent?) {
-            super.pressesBegan(presses, with: event)
-            control?.pressesBegan(presses, with: event)
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            super.touchesBegan(touches, with: event)
+            control?.touchesBegan(touches, with: event)
         }
-        override func pressesMoved(_ presses: Set<UITouch>, with event: UIEvent?) {
-            super.pressesMoved(presses, with: event)
-            control?.pressesMoved(presses, with: event)
+        override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+            super.touchesMoved(touches, with: event)
+            control?.touchesMoved(touches, with: event)
         }
-        override func pressesEnded(_ presses: Set<UITouch>, with event: UIEvent?) {
-            super.pressesEnded(presses, with: event)
-            control?.pressesEnded(presses, with: event)
+        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+            super.touchesEnded(touches, with: event)
+            control?.touchesEnded(touches, with: event)
         }
-        override func pressesCancelled(_ presses: Set<UITouch>, with event: UIEvent?) {
-            super.pressesCancelled(presses, with: event)
-            control?.pressesCancelled(presses, with: event)
+        override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+            super.touchesCancelled(touches, with: event)
+            control?.touchesCancelled(touches, with: event)
         }
     }
     
     internal class SpriteNode: SKSpriteNode {
         weak var control: Control?
-        override func pressesBegan(_ presses: Set<UITouch>, with event: UIEvent?) {
-            super.pressesBegan(presses, with: event)
-            control?.pressesBegan(presses, with: event)
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            super.touchesBegan(touches, with: event)
+            control?.touchesBegan(touches, with: event)
         }
-        override func pressesMoved(_ presses: Set<UITouch>, with event: UIEvent?) {
-            super.pressesMoved(presses, with: event)
-            control?.pressesMoved(presses, with: event)
+        override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+            super.touchesMoved(touches, with: event)
+            control?.touchesMoved(touches, with: event)
         }
-        override func pressesEnded(_ presses: Set<UITouch>, with event: UIEvent?) {
-            super.pressesEnded(presses, with: event)
-            control?.pressesEnded(presses, with: event)
+        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+            super.touchesEnded(touches, with: event)
+            control?.touchesEnded(touches, with: event)
         }
-        override func pressesCancelled(_ presses: Set<UITouch>, with event: UIEvent?) {
-            super.pressesCancelled(presses, with: event)
-            control?.pressesCancelled(presses, with: event)
+        override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+            super.touchesCancelled(touches, with: event)
+            control?.touchesCancelled(touches, with: event)
         }
     }
 }
