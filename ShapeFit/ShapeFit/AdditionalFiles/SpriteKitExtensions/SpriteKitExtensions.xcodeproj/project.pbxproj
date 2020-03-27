@@ -8,12 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		B2CCABC1242C3CC500B09164 /* SpriteKitExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCABBF242C3CC500B09164 /* SpriteKitExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2CCABDE242C40A100B09164 /* StackNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABDC242C40A000B09164 /* StackNode.swift */; };
+		B2CCABDF242C40A100B09164 /* CollectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABDD242C40A000B09164 /* CollectionNode.swift */; };
+		B2CCABE1242C40F100B09164 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABE0242C40F100B09164 /* Button.swift */; };
+		B2CCABE3242C40FF00B09164 /* Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABE2242C40FF00B09164 /* Switch.swift */; };
+		B2CCABE6242C547D00B09164 /* ControlTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABE5242C547D00B09164 /* ControlTypes.swift */; };
+		B2CCABE8242C54AB00B09164 /* ControlHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABE7242C54AB00B09164 /* ControlHelpers.swift */; };
+		B2CCABEA242C54E000B09164 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABE9242C54E000B09164 /* Control.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B2CCABBC242C3CC500B09164 /* SpriteKitExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpriteKitExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2CCABBF242C3CC500B09164 /* SpriteKitExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteKitExtensions.h; sourceTree = "<group>"; };
 		B2CCABC0242C3CC500B09164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2CCABDC242C40A000B09164 /* StackNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackNode.swift; sourceTree = "<group>"; };
+		B2CCABDD242C40A000B09164 /* CollectionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNode.swift; sourceTree = "<group>"; };
+		B2CCABE0242C40F100B09164 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		B2CCABE2242C40FF00B09164 /* Switch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switch.swift; sourceTree = "<group>"; };
+		B2CCABE5242C547D00B09164 /* ControlTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlTypes.swift; sourceTree = "<group>"; };
+		B2CCABE7242C54AB00B09164 /* ControlHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlHelpers.swift; sourceTree = "<group>"; };
+		B2CCABE9242C54E000B09164 /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +60,33 @@
 		B2CCABBE242C3CC500B09164 /* SpriteKitExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				B2CCABDA242C40A000B09164 /* Controls */,
+				B2CCABDB242C40A000B09164 /* Structure */,
 				B2CCABBF242C3CC500B09164 /* SpriteKitExtensions.h */,
 				B2CCABC0242C3CC500B09164 /* Info.plist */,
 			);
 			path = SpriteKitExtensions;
+			sourceTree = "<group>";
+		};
+		B2CCABDA242C40A000B09164 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				B2CCABE0242C40F100B09164 /* Button.swift */,
+				B2CCABE9242C54E000B09164 /* Control.swift */,
+				B2CCABE5242C547D00B09164 /* ControlTypes.swift */,
+				B2CCABE2242C40FF00B09164 /* Switch.swift */,
+				B2CCABE7242C54AB00B09164 /* ControlHelpers.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		B2CCABDB242C40A000B09164 /* Structure */ = {
+			isa = PBXGroup;
+			children = (
+				B2CCABDC242C40A000B09164 /* StackNode.swift */,
+				B2CCABDD242C40A000B09164 /* CollectionNode.swift */,
+			);
+			path = Structure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CCABDE242C40A100B09164 /* StackNode.swift in Sources */,
+				B2CCABE6242C547D00B09164 /* ControlTypes.swift in Sources */,
+				B2CCABEA242C54E000B09164 /* Control.swift in Sources */,
+				B2CCABE3242C40FF00B09164 /* Switch.swift in Sources */,
+				B2CCABE1242C40F100B09164 /* Button.swift in Sources */,
+				B2CCABDF242C40A100B09164 /* CollectionNode.swift in Sources */,
+				B2CCABE8242C54AB00B09164 /* ControlHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

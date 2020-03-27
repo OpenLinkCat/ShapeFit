@@ -50,6 +50,9 @@
 		B2CCABAB242C38BB00B09164 /* DisappearandAppearExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABAA242C38BB00B09164 /* DisappearandAppearExtension.swift */; };
 		B2CCABAE242C392100B09164 /* GCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABAD242C392100B09164 /* GCHelper.swift */; };
 		B2CCABD1242C3D7F00B09164 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2CCABCA242C3D7F00B09164 /* Info.plist */; };
+		B2CCABD7242C400400B09164 /* StackNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABD6242C400400B09164 /* StackNode.swift */; };
+		B2CCABD9242C402900B09164 /* CollectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABD8242C402900B09164 /* CollectionNode.swift */; };
+		B2CCABEF242C56A400B09164 /* LPRFixedWidthLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABEE242C56A400B09164 /* LPRFixedWidthLabelNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,10 @@
 		B2CCABC9242C3D7F00B09164 /* SpriteKitExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteKitExtensions.h; sourceTree = "<group>"; };
 		B2CCABCA242C3D7F00B09164 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2CCABCB242C3D7F00B09164 /* SpriteKitExtensions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SpriteKitExtensions.xcodeproj; sourceTree = "<group>"; };
+		B2CCABD6242C400400B09164 /* StackNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackNode.swift; sourceTree = "<group>"; };
+		B2CCABD8242C402900B09164 /* CollectionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNode.swift; sourceTree = "<group>"; };
+		B2CCABED242C564E00B09164 /* LPRFixedWidthLabelNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPRFixedWidthLabelNode.h; sourceTree = "<group>"; };
+		B2CCABEE242C56A400B09164 /* LPRFixedWidthLabelNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPRFixedWidthLabelNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +202,7 @@
 		B2C82B09242A9B7D0081AE00 /* SKTUtils */ = {
 			isa = PBXGroup;
 			children = (
+				B2CCABEB242C560800B09164 /* LPRFixedWidthLabelNode */,
 				B2C82B0A242A9B7D0081AE00 /* SKColor+Extensions.swift */,
 				B2C82B0B242A9B7D0081AE00 /* CGVector+Extensions.swift */,
 				B2C82B0C242A9B7D0081AE00 /* Int+Extensions.swift */,
@@ -316,7 +324,7 @@
 		B2CCABC8242C3D7F00B09164 /* SpriteKitExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				B2CCABD5242C3DE400B09164 /* Layout */,
+				B2CCABD5242C3DE400B09164 /* Structure */,
 				B2CCABD4242C3DDC00B09164 /* Controls */,
 				B2CCABC9242C3D7F00B09164 /* SpriteKitExtensions.h */,
 				B2CCABCA242C3D7F00B09164 /* Info.plist */,
@@ -339,11 +347,22 @@
 			path = Controls;
 			sourceTree = "<group>";
 		};
-		B2CCABD5242C3DE400B09164 /* Layout */ = {
+		B2CCABD5242C3DE400B09164 /* Structure */ = {
 			isa = PBXGroup;
 			children = (
+				B2CCABD6242C400400B09164 /* StackNode.swift */,
+				B2CCABD8242C402900B09164 /* CollectionNode.swift */,
 			);
-			path = Layout;
+			path = Structure;
+			sourceTree = "<group>";
+		};
+		B2CCABEB242C560800B09164 /* LPRFixedWidthLabelNode */ = {
+			isa = PBXGroup;
+			children = (
+				B2CCABED242C564E00B09164 /* LPRFixedWidthLabelNode.h */,
+				B2CCABEE242C56A400B09164 /* LPRFixedWidthLabelNode.m */,
+			);
+			path = LPRFixedWidthLabelNode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +397,7 @@
 				TargetAttributes = {
 					B2296A212427F14F00362B05 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -448,6 +468,7 @@
 				B2C82B1F242A9B7D0081AE00 /* SKTAudio.swift in Sources */,
 				B2A4A79B242BCA50004E9BB1 /* UIViewResize.swift in Sources */,
 				B2ABFFEF242B056D00F5E06A /* Spinner.swift in Sources */,
+				B2CCABD7242C400400B09164 /* StackNode.swift in Sources */,
 				B2C82B24242AD2520081AE00 /* UIBezierShapePathExtension.swift in Sources */,
 				B2C82B1C242A9B7D0081AE00 /* SKNode+Extensions.swift in Sources */,
 				B2AB0001242B0F6500F5E06A /* BuildMode.swift in Sources */,
@@ -462,6 +483,7 @@
 				B2ABFFFD242B0CCE00F5E06A /* SpinnerFunctions.swift in Sources */,
 				B2296A262427F14F00362B05 /* AppDelegate.swift in Sources */,
 				B262EB3324286D5C0065787C /* ShapeTypeProperties.swift in Sources */,
+				B2CCABEF242C56A400B09164 /* LPRFixedWidthLabelNode.m in Sources */,
 				B2AB0003242B14F700F5E06A /* UIImageExtension.swift in Sources */,
 				B2CCABA9242C381D00B09164 /* SoundExtension.swift in Sources */,
 				B2ABFFFB242B09FD00F5E06A /* RandomNumber.swift in Sources */,
@@ -471,6 +493,7 @@
 				B2C82B21242A9B7D0081AE00 /* CGFloat+Extensions.swift in Sources */,
 				B2ABFFF3242B080A00F5E06A /* ConfigureTexture.swift in Sources */,
 				B2C82B20242A9B7D0081AE00 /* Vector3.swift in Sources */,
+				B2CCABD9242C402900B09164 /* CollectionNode.swift in Sources */,
 				B24E32DE242801B400698A95 /* Shape.swift in Sources */,
 				B2ABFFFF242B0CEB00F5E06A /* Physics.swift in Sources */,
 			);
@@ -608,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3U3SNC9LRZ;
 				INFOPLIST_FILE = ShapeFit/Info.plist;
@@ -617,6 +641,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = monkeyank.ShapeFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -626,6 +651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3U3SNC9LRZ;
 				INFOPLIST_FILE = ShapeFit/Info.plist;

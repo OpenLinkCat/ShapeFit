@@ -41,7 +41,7 @@ class Shape: SKSpriteNode {
         shapeType = type
         shapeColors = type.color()
         super.init(texture: nil, color: .clear, size: Shape.defaultSize)
-        
+              
         run(.setTexture(AppCache.instance.mainAtlas.textureNamed(type.textureName()), resize: true))
 
         if BUILD_MODE == .debug {
