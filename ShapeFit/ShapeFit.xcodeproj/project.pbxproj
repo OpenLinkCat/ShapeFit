@@ -17,6 +17,7 @@
 		B24DC006242ECF8C002CAFEA /* AppPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24DC005242ECF8C002CAFEA /* AppPersistance.swift */; };
 		B24DC008242ECF9D002CAFEA /* AppDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24DC007242ECF9C002CAFEA /* AppDefines.swift */; };
 		B24DC014242ED581002CAFEA /* LPRFixedWidthLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B24DC013242ED581002CAFEA /* LPRFixedWidthLabelNode.m */; };
+		B24DC016242ED8D1002CAFEA /* GameGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24DC015242ED8D1002CAFEA /* GameGestures.swift */; };
 		B24E32DE242801B400698A95 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E32DD242801B400698A95 /* Shape.swift */; };
 		B262EB3124286CCD0065787C /* ShapeTypeTrajectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3024286CCD0065787C /* ShapeTypeTrajectories.swift */; };
 		B262EB3324286D5C0065787C /* ShapeTypeProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3224286D5C0065787C /* ShapeTypeProperties.swift */; };
@@ -105,6 +106,7 @@
 		B24DC007242ECF9C002CAFEA /* AppDefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefines.swift; sourceTree = "<group>"; };
 		B24DC012242ED581002CAFEA /* ShapeFit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShapeFit-Bridging-Header.h"; sourceTree = "<group>"; };
 		B24DC013242ED581002CAFEA /* LPRFixedWidthLabelNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPRFixedWidthLabelNode.m; sourceTree = "<group>"; };
+		B24DC015242ED8D1002CAFEA /* GameGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGestures.swift; sourceTree = "<group>"; };
 		B24E32DD242801B400698A95 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		B262EB3024286CCD0065787C /* ShapeTypeTrajectories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypeTrajectories.swift; sourceTree = "<group>"; };
 		B262EB3224286D5C0065787C /* ShapeTypeProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypeProperties.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				B2C82B27242AE1530081AE00 /* Spinner */,
 				B2C82B26242AE1430081AE00 /* Shapes */,
 				B2ABFFFE242B0CEB00F5E06A /* Physics.swift */,
+				B24DC015242ED8D1002CAFEA /* GameGestures.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				B2C82B20242A9B7D0081AE00 /* Vector3.swift in Sources */,
 				B24E32DE242801B400698A95 /* Shape.swift in Sources */,
 				B2ABFFFF242B0CEB00F5E06A /* Physics.swift in Sources */,
+				B24DC016242ED8D1002CAFEA /* GameGestures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,9 @@
 
 import Foundation
 import SpriteKit
+
 // TODO: Add appStoreID and appStoreLink
+
 enum AppDefines {
     enum Constants {
         static let mainLeaderboardID = "ShapeFitLeaderboard"
