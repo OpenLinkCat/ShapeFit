@@ -2,12 +2,11 @@
 //  LPRFixedWidthLabelNode.m
 //  ShapeFit
 //
-//  Created by Ankith on 3/25/20.
+//  Created by Ankith on 3/27/20.
 //  Copyright © 2020 Ankith. All rights reserved.
 //
 
-// Created with suggestion from SKTUtils github to solve some issues with UI
-
+// Created by suggestion of SKUtils github to fix some UI stuff
 #import "LPRFixedWidthLabelNode.h"
 
 #define DEFAULT_TRUNCATION_SUFIX @"..."
@@ -137,4 +136,3 @@
 }
 
 @end
-

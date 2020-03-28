@@ -6,4 +6,14 @@
 //  Copyright © 2020 Ankith. All rights reserved.
 //
 
-import Foundation
+struct Score {
+    var points = 0
+    
+    init(points: Int) {
+        self.points = points
+    }
+    
+    func highScorePoints() -> Int {
+        return AppPersistence.highScorePoints
+    }
+}

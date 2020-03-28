@@ -1,12 +1,8 @@
 //
-//  LPRFixedWidthLabelNode.h
-//  ShapeFit
-//
-//  Created by Ankith on 3/25/20.
-//  Copyright © 2020 Ankith. All rights reserved.
+//  Use this file to import your target's public headers that you would like to expose to Swift.
 //
 
-// Created with suggestion from SKTUtils github to solve some issues with UI
+// Created by suggestion of SKUtils github to fix some UI stuff
 
 #import <SpriteKit/SpriteKit.h>
 
