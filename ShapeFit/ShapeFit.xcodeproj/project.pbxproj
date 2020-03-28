@@ -10,6 +10,10 @@
 		B2296A262427F14F00362B05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2296A252427F14F00362B05 /* AppDelegate.swift */; };
 		B2296A332427F15100362B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2296A322427F15100362B05 /* Assets.xcassets */; };
 		B2296A362427F15100362B05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2296A342427F15100362B05 /* LaunchScreen.storyboard */; };
+		B24DBFFD242ECC18002CAFEA /* MainGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24DBFFC242ECC18002CAFEA /* MainGameScene.swift */; };
+		B24DC000242ECC34002CAFEA /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24DBFFF242ECC34002CAFEA /* Score.swift */; };
+		B24DC002242ECC58002CAFEA /* ScoreStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24DC001242ECC58002CAFEA /* ScoreStorage.swift */; };
+		B24DC004242ECC70002CAFEA /* ScoreDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24DC003242ECC70002CAFEA /* ScoreDisplay.swift */; };
 		B24E32DE242801B400698A95 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E32DD242801B400698A95 /* Shape.swift */; };
 		B262EB3124286CCD0065787C /* ShapeTypeTrajectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3024286CCD0065787C /* ShapeTypeTrajectories.swift */; };
 		B262EB3324286D5C0065787C /* ShapeTypeProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3224286D5C0065787C /* ShapeTypeProperties.swift */; };
@@ -84,6 +88,10 @@
 		B2296A322427F15100362B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2296A352427F15100362B05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2296A372427F15100362B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B24DBFFC242ECC18002CAFEA /* MainGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameScene.swift; sourceTree = "<group>"; };
+		B24DBFFF242ECC34002CAFEA /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		B24DC001242ECC58002CAFEA /* ScoreStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreStorage.swift; sourceTree = "<group>"; };
+		B24DC003242ECC70002CAFEA /* ScoreDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreDisplay.swift; sourceTree = "<group>"; };
 		B24E32DD242801B400698A95 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		B262EB3024286CCD0065787C /* ShapeTypeTrajectories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypeTrajectories.swift; sourceTree = "<group>"; };
 		B262EB3224286D5C0065787C /* ShapeTypeProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypeProperties.swift; sourceTree = "<group>"; };
@@ -287,6 +295,9 @@
 		B2C82B28242AE1630081AE00 /* Score */ = {
 			isa = PBXGroup;
 			children = (
+				B24DBFFF242ECC34002CAFEA /* Score.swift */,
+				B24DC001242ECC58002CAFEA /* ScoreStorage.swift */,
+				B24DC003242ECC70002CAFEA /* ScoreDisplay.swift */,
 			);
 			path = Score;
 			sourceTree = "<group>";
@@ -316,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				B2CCABA6242C373400B09164 /* IntialScene.swift */,
+				B24DBFFC242ECC18002CAFEA /* MainGameScene.swift */,
 			);
 			path = GameScenes;
 			sourceTree = "<group>";
@@ -492,6 +504,7 @@
 				B2C82B17242A9B7D0081AE00 /* CGVector+Extensions.swift in Sources */,
 				B2C82B1D242A9B7D0081AE00 /* CGPoint+Extensions.swift in Sources */,
 				B2A4A7A0242BD131004E9BB1 /* UpdateTimer.swift in Sources */,
+				B24DBFFD242ECC18002CAFEA /* MainGameScene.swift in Sources */,
 				B2ABFFF7242B088300F5E06A /* AppColors.swift in Sources */,
 				B2CCABA7242C373400B09164 /* IntialScene.swift in Sources */,
 				B2A4A7AA242BD2A7004E9BB1 /* ScreenViewController.swift in Sources */,
@@ -513,11 +526,14 @@
 				B2ABFFF9242B095000F5E06A /* AppCache.swift in Sources */,
 				B2ABFFFD242B0CCE00F5E06A /* SpinnerFunctions.swift in Sources */,
 				B2296A262427F14F00362B05 /* AppDelegate.swift in Sources */,
+				B24DC000242ECC34002CAFEA /* Score.swift in Sources */,
 				B262EB3324286D5C0065787C /* ShapeTypeProperties.swift in Sources */,
 				B2CCABEF242C56A400B09164 /* LPRFixedWidthLabelNode.m in Sources */,
 				B2AB0003242B14F700F5E06A /* UIImageExtension.swift in Sources */,
 				B2CCABA9242C381D00B09164 /* SoundExtension.swift in Sources */,
 				B2ABFFFB242B09FD00F5E06A /* RandomNumber.swift in Sources */,
+				B24DC002242ECC58002CAFEA /* ScoreStorage.swift in Sources */,
+				B24DC004242ECC70002CAFEA /* ScoreDisplay.swift in Sources */,
 				B2C82B18242A9B7D0081AE00 /* Int+Extensions.swift in Sources */,
 				B2ABFFF1242B07D400F5E06A /* TextureExtension.swift in Sources */,
 				B262EB3524286D700065787C /* ShapeTypes.swift in Sources */,
