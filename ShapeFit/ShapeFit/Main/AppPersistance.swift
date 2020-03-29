@@ -21,9 +21,9 @@ enum AppDefines {
     }
     
     enum FontName {
-        static let defaultLight = "VAGRoundedStd-Light"
-        static let defaultBlack = "VAGRoundedStd-Black"
-        static let defaultBold = "VAGRoundedStd-Bold"
+        static let defaultLight = "Roboto-Light"
+        static let defaultBlack = "Roboto-Black"
+        static let defaultBold = "Roboto-Bold"
     }
     
     enum Timings {

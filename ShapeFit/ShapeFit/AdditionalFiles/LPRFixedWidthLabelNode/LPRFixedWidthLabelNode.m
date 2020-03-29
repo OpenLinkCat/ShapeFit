@@ -7,7 +7,7 @@
 //
 
 // Created by suggestion of SKUtils github to fix some UI stuff
-#import "LPRFixedWidthLabelNode.h"
+#import "ShapeFit-Bridging-Header.h"
 
 #define DEFAULT_TRUNCATION_SUFIX @"..."
 #define DEFAULT_TRUNCATION_PROTECTED_LAST_CHARACTERS @"?!:;'\""

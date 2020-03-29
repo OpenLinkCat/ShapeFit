@@ -68,7 +68,7 @@ class Spinner: SKSpriteNode {
         run(.actionWithEffect(effect), withKey: isRotatingActionKey)
     }
     
- /* Add after getting sound resource files
+
      private func soundFor(_ right: Bool) -> SKAction? {
         return .playSoundFileIfEnabled("spinner_turn.wav", waitForCompletion: true)
     }
@@ -79,6 +79,5 @@ class Spinner: SKSpriteNode {
          else { activedSection += 1 }
          snapTo(CGFloat(activedSection) * section, delay: delay)
      }
-     
- */
+
 }

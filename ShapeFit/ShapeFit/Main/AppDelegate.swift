@@ -29,11 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.makeKeyAndVisible()
         window!.rootViewController = ScreenViewController()
         return true
-    
-
-
-    }
-
-
 }
-
+        func applicationDidBecomeActive(_ application: UIApplication) {
+        AppPersistence.matchesPlayedSinceLaunch = 0
+        if let gameScene = mainGameViewController.mainGameView.scene as? MainGameScene {
+            gameScene.updateTimer.lap()
+        }
+    }
+}

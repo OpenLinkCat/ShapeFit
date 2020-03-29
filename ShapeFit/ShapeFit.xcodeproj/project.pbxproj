@@ -19,9 +19,19 @@
 		B24DC014242ED581002CAFEA /* LPRFixedWidthLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B24DC013242ED581002CAFEA /* LPRFixedWidthLabelNode.m */; };
 		B24DC016242ED8D1002CAFEA /* GameGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24DC015242ED8D1002CAFEA /* GameGestures.swift */; };
 		B24E32DE242801B400698A95 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24E32DD242801B400698A95 /* Shape.swift */; };
+		B25174F024300B0D00286385 /* ShareScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25174EF24300B0D00286385 /* ShareScene.swift */; };
 		B262EB3124286CCD0065787C /* ShapeTypeTrajectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3024286CCD0065787C /* ShapeTypeTrajectories.swift */; };
 		B262EB3324286D5C0065787C /* ShapeTypeProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3224286D5C0065787C /* ShapeTypeProperties.swift */; };
 		B262EB3524286D700065787C /* ShapeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3424286D700065787C /* ShapeTypes.swift */; };
+		B274E2EA24313F490084E0B6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B274E2E724313F490084E0B6 /* Roboto-Light.ttf */; };
+		B274E2EB24313F490084E0B6 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B274E2E824313F490084E0B6 /* Roboto-Bold.ttf */; };
+		B274E2EC24313F490084E0B6 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B274E2E924313F490084E0B6 /* Roboto-Black.ttf */; };
+		B274E2F4243141FF0084E0B6 /* shape_failure.wav in Resources */ = {isa = PBXBuildFile; fileRef = B274E2EE243141FF0084E0B6 /* shape_failure.wav */; };
+		B274E2F5243141FF0084E0B6 /* shape_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = B274E2EF243141FF0084E0B6 /* shape_success.wav */; };
+		B274E2F6243141FF0084E0B6 /* shape_special.wav in Resources */ = {isa = PBXBuildFile; fileRef = B274E2F0243141FF0084E0B6 /* shape_special.wav */; };
+		B274E2F7243141FF0084E0B6 /* button_down.wav in Resources */ = {isa = PBXBuildFile; fileRef = B274E2F1243141FF0084E0B6 /* button_down.wav */; };
+		B274E2F8243141FF0084E0B6 /* button_up.wav in Resources */ = {isa = PBXBuildFile; fileRef = B274E2F2243141FF0084E0B6 /* button_up.wav */; };
+		B274E2F9243141FF0084E0B6 /* spinner_turn.wav in Resources */ = {isa = PBXBuildFile; fileRef = B274E2F3243141FF0084E0B6 /* spinner_turn.wav */; };
 		B29457C1242DB77A00E9E4D7 /* SpriteKitExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CCABD0242C3D7F00B09164 /* SpriteKitExtensions.framework */; };
 		B29457C2242DB77A00E9E4D7 /* SpriteKitExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CCABD0242C3D7F00B09164 /* SpriteKitExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2A4A799242BCA15004E9BB1 /* MainGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A4A798242BCA15004E9BB1 /* MainGameViewController.swift */; };
@@ -108,9 +118,19 @@
 		B24DC013242ED581002CAFEA /* LPRFixedWidthLabelNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPRFixedWidthLabelNode.m; sourceTree = "<group>"; };
 		B24DC015242ED8D1002CAFEA /* GameGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGestures.swift; sourceTree = "<group>"; };
 		B24E32DD242801B400698A95 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		B25174EF24300B0D00286385 /* ShareScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareScene.swift; sourceTree = "<group>"; };
 		B262EB3024286CCD0065787C /* ShapeTypeTrajectories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypeTrajectories.swift; sourceTree = "<group>"; };
 		B262EB3224286D5C0065787C /* ShapeTypeProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypeProperties.swift; sourceTree = "<group>"; };
 		B262EB3424286D700065787C /* ShapeTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTypes.swift; sourceTree = "<group>"; };
+		B274E2E724313F490084E0B6 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		B274E2E824313F490084E0B6 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		B274E2E924313F490084E0B6 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		B274E2EE243141FF0084E0B6 /* shape_failure.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shape_failure.wav; sourceTree = "<group>"; };
+		B274E2EF243141FF0084E0B6 /* shape_success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shape_success.wav; sourceTree = "<group>"; };
+		B274E2F0243141FF0084E0B6 /* shape_special.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shape_special.wav; sourceTree = "<group>"; };
+		B274E2F1243141FF0084E0B6 /* button_down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button_down.wav; sourceTree = "<group>"; };
+		B274E2F2243141FF0084E0B6 /* button_up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button_up.wav; sourceTree = "<group>"; };
+		B274E2F3243141FF0084E0B6 /* spinner_turn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spinner_turn.wav; sourceTree = "<group>"; };
 		B29457AC242DACFF00E9E4D7 /* ControlHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlHelpers.swift; sourceTree = "<group>"; };
 		B29457AE242DACFF00E9E4D7 /* Control.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
 		B29457AF242DACFF00E9E4D7 /* Switch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Switch.swift; sourceTree = "<group>"; };
@@ -224,6 +244,29 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
+		B274E2E624313F480084E0B6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B274E2E724313F490084E0B6 /* Roboto-Light.ttf */,
+				B274E2E824313F490084E0B6 /* Roboto-Bold.ttf */,
+				B274E2E924313F490084E0B6 /* Roboto-Black.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B274E2ED243141FF0084E0B6 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B274E2EE243141FF0084E0B6 /* shape_failure.wav */,
+				B274E2EF243141FF0084E0B6 /* shape_success.wav */,
+				B274E2F0243141FF0084E0B6 /* shape_special.wav */,
+				B274E2F1243141FF0084E0B6 /* button_down.wav */,
+				B274E2F2243141FF0084E0B6 /* button_up.wav */,
+				B274E2F3243141FF0084E0B6 /* spinner_turn.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		B29457BA242DB4F900E9E4D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,13 +280,6 @@
 				B2A4A79F242BD131004E9BB1 /* UpdateTimer.swift */,
 			);
 			path = UpdateTimer;
-			sourceTree = "<group>";
-		};
-		B2AB0004242B18DC00F5E06A /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Sounds;
 			sourceTree = "<group>";
 		};
 		B2C82AD7242A8C400081AE00 /* AdditionalFiles */ = {
@@ -353,6 +389,7 @@
 			children = (
 				B2CCABA6242C373400B09164 /* IntialScene.swift */,
 				B24DBFFC242ECC18002CAFEA /* MainGameScene.swift */,
+				B25174EF24300B0D00286385 /* ShareScene.swift */,
 			);
 			path = GameScenes;
 			sourceTree = "<group>";
@@ -360,7 +397,8 @@
 		B2C82B2C242AE2040081AE00 /* AppResources */ = {
 			isa = PBXGroup;
 			children = (
-				B2AB0004242B18DC00F5E06A /* Sounds */,
+				B274E2ED243141FF0084E0B6 /* Sounds */,
+				B274E2E624313F480084E0B6 /* Fonts */,
 				B2296A322427F15100362B05 /* Assets.xcassets */,
 				B2296A342427F15100362B05 /* LaunchScreen.storyboard */,
 			);
@@ -502,9 +540,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B274E2F4243141FF0084E0B6 /* shape_failure.wav in Resources */,
+				B274E2F8243141FF0084E0B6 /* button_up.wav in Resources */,
 				B2A4A7A8242BD29B004E9BB1 /* Screen.xib in Resources */,
+				B274E2F9243141FF0084E0B6 /* spinner_turn.wav in Resources */,
 				B2296A332427F15100362B05 /* Assets.xcassets in Resources */,
+				B274E2EB24313F490084E0B6 /* Roboto-Bold.ttf in Resources */,
+				B274E2EA24313F490084E0B6 /* Roboto-Light.ttf in Resources */,
+				B274E2F6243141FF0084E0B6 /* shape_special.wav in Resources */,
+				B274E2F7243141FF0084E0B6 /* button_down.wav in Resources */,
 				B2296A362427F15100362B05 /* LaunchScreen.storyboard in Resources */,
+				B274E2F5243141FF0084E0B6 /* shape_success.wav in Resources */,
+				B274E2EC24313F490084E0B6 /* Roboto-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +590,7 @@
 				B2CCABAE242C392100B09164 /* GCHelper.swift in Sources */,
 				B2A4A7A2242BD1B2004E9BB1 /* DelayinTimer.swift in Sources */,
 				B2A4A79D242BCBFF004E9BB1 /* Doubles+Floats.swift in Sources */,
+				B25174F024300B0D00286385 /* ShareScene.swift in Sources */,
 				B2ABFFF9242B095000F5E06A /* AppCache.swift in Sources */,
 				B2ABFFFD242B0CCE00F5E06A /* SpinnerFunctions.swift in Sources */,
 				B2296A262427F14F00362B05 /* AppDelegate.swift in Sources */,
