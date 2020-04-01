@@ -30,7 +30,6 @@ class AppCache {
     }
     
     // MARK: Gradients and Background Shape Crops
-    
     private var gradients: [ShapeType: SKTexture]?
     private(set) var backgroundCrops: [ShapeType: SKSpriteNode]?
     

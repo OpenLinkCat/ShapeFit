@@ -20,8 +20,8 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
     private let gameSceneNodeContainer = SKNode()
     private let gradientNode: SKSpriteNode
     
-    private var animationAppear: (() -> Void)? = nil
-    private var animationDisappear: (() -> Void)? = nil
+    private var animationApear: (() -> Void)? = nil
+    private var animationDisapear: (() -> Void)? = nil
     
     private var firstShape:Bool = true
     private var gameEndedDoOnce = false
@@ -75,7 +75,6 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-                                      
     init(isEndlessGame: Bool = false) {
         ShapeType.lastRandomShapeIndex = 0
         let newSize = MainGameScene.calculateSceneSize()
@@ -132,7 +131,7 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
             isWaitingForLeft = true
         }
 
-        animationAppear = {  [weak self] in
+        animationApear = {  [weak self] in
             if let strongSelf = self {
                 var start = CGPoint(x: 0, y: strongSelf.spinner.position.y - strongSelf.spinner.size.height)
 
@@ -151,7 +150,7 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
 
-        animationDisappear = { [weak self] in
+        animationDisapear = { [weak self] in
             if let strongSelf = self {
                 var end: CGPoint = CGPoint(x: 0, y: strongSelf.spinner.position.y - strongSelf.spinner.size.height)
 
@@ -179,10 +178,10 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
 
     private func removeUIandPresentScene(_ scene: SKScene) {
         func present() {
-            AppDelegate.mainGameViewController.mainGameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
+            AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
         }
         
-        if let anim = animationDisappear {
+        if let anim = animationDisapear {
             anim()
             afterDelay(0.36) { present() }
         } else {
@@ -192,7 +191,7 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
 
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        animationAppear?()
+        animationApear?()
 
         afterDelay(0.8) {
             AppCache.instance.backgroundCrops?.forEach { $0.1.removeFromParent() }
@@ -228,11 +227,11 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
         
         if nodeAisAShape && nodeBisAShape {
             if a.categoryBitMask == b.categoryBitMask {
-                if let sh = a.node as? Shape, let sp = b.node as? SpinnerFunctions { resolveCollision(between: sp, and: sh) }
-                else if let sh = b.node as? Shape, let sp = a.node as? SpinnerFunctions { resolveCollision(between: sp, and: sh) }
+                if let sh = a.node as? Shape, let sp = b.node as? SpinnerPart { resolveCollision(between: sp, and: sh) }
+                else if let sh = b.node as? Shape, let sp = a.node as? SpinnerPart { resolveCollision(between: sp, and: sh) }
             } else {
-                if let sh = a.node as? Shape, let _ = b.node as? SpinnerFunctions { wrongCollision(sh) }
-                else if let sh = b.node as? Shape, let _ = a.node as? SpinnerFunctions { wrongCollision(sh) }
+                if let sh = a.node as? Shape, let _ = b.node as? SpinnerPart { wrongCollision(sh) }
+                else if let sh = b.node as? Shape, let _ = a.node as? SpinnerPart { wrongCollision(sh) }
             }
         }
     }
@@ -249,19 +248,19 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        failureEffect(shape.failureNoticeTime, lastShape: shape.shapeType)
+        failureEffect(shape.failureDuration, lastShape: shape.shapeType)
     }
     
-    private func resolveCollision(between spinnerFunctions: SpinnerFunctions, and shape: Shape) {
-        guard shape.activated else { shape.countToExplode(); return }
+    private func resolveCollision(between spinnerPart: SpinnerPart, and shape: Shape) {
+        guard shape.actived else { shape.countToExplode(); return }
         
         let position = convert(shape.position, from: shape.parent!)
-        if position.isClose(to: convert(spinnerFunctions.dockingPosition, from: spinnerFunctions), with: 16) {
+        if position.isClose(to: convert(spinnerPart.dockingPosition, from: spinnerPart), with: 16) {
 
             shape.position = spinner.convert(shape.position, from: shape.parent!)
             shape.zRotation -= spinner.zRotation
             shape.zPosition = 5
-            shape.removeAction(forKey: Shape.Actions.move)
+            shape.removeAction(forKey: Shape.ActionKey.move)
             shape.removeFromParent()
             
             spinner.addChild(shape)
@@ -270,18 +269,18 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
             let notZero = (num != 0)
             shape.success(tenMultiples && notZero)
             
-            let effect = SKTMoveEffect(node: shape, duration: shape.disappearingTime, startPosition: shape.position, endPosition: .zero)
+            let effect = SKTMoveEffect(node: shape, duration: shape.disappearDuration, startPosition: shape.position, endPosition: .zero)
             effect.timingFunction = SKTTimingFunctionLinear
             
             let ac: SKAction = .actionWithEffect(effect)
-            if shape.timeToDisappear > 0 {
-                shape.run(.afterDelay(shape.timeToDisappear, performAction: ac), withKey: Shape.Actions.move)
+            if shape.waitToDisappearDuration > 0 {
+                shape.run(.afterDelay(shape.waitToDisappearDuration, performAction: ac), withKey: Shape.ActionKey.move)
             } else {
-                shape.run(ac, withKey: Shape.Actions.move)
+                shape.run(ac, withKey: Shape.ActionKey.move)
             }
             
             scoreBoard.add1Point()
-            successEffect(shape.timeToDisappear + shape.shapeCreationTime/2, shapeType: shape.shapeType)
+            successEffect(shape.disappearDuration + shape.creationDuration/2, shapeType: shape.shapeType)
         }
     }
 
@@ -324,10 +323,10 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
         
         let delay = GameTiming.delayBetweenLaunches(scoreBoard.points)
         
-        node.moveTime = moveDiv * delay
-        node.shapeCreationTime = creationDiv * delay
-        node.disappearingTime = disappearDiv * delay
-        node.timeToDisappear = waitToDisapearDiv * delay
+        node.moveDuration = moveDiv * delay
+        node.creationDuration = creationDiv * delay
+        node.disappearDuration = disappearDiv * delay
+        node.waitToDisappearDuration = waitToDisapearDiv * delay
         
         
         node.create() { [weak self] in
@@ -338,7 +337,7 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     static func calculateSceneSize(_ size: CGSize? = nil) -> CGSize {
-        let size = size ?? AppDelegate.mainGameViewController.mainGameView.frame.size
+        let size = size ?? AppDelegate.gameViewController.gameView.frame.size
         let defaultHeight: CGFloat = 736 + (AppDefines.Constants.isiPhoneX ? 30 : 0)
         let const = defaultHeight / size.height
         return CGSize(width: const * size.width, height: defaultHeight)
@@ -435,24 +434,24 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
             let delay = GameTiming.spinnerDelay(scoreBoard.points)
             if right {
                 rightArrow.tap()
-                spinner.spin(true, delay: delay)
+                spinner.spinn(true, delay: delay)
                 isWaitingForRight = false
             } else {
                 leftArrow.tap()
-                spinner.spin(false, delay: delay)
+                spinner.spinn(false, delay: delay)
                 isWaitingForLeft = false
             }
         } else {
             if right {
                 if isWaitingForRight {
                     rightArrow.tap()
-                    spinner.spin(true)
+                    spinner.spinn(true)
                     isWaitingForRight = false
                 }
             } else {
                 if isWaitingForLeft {
                     leftArrow.tap()
-                    spinner.spin(false)
+                    spinner.spinn(false)
                     isWaitingForLeft = false
                 }
             }

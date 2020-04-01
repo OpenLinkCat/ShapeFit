@@ -42,7 +42,7 @@ enum PhysicsCategory: UInt32 {
         case .none:
             return none.rawValue
         default:
-            assertionFailure("Doesn't have a category match (contact)")
+            assertionFailure("Doesn't have a contact category match")
             return none.rawValue
         }
     }
@@ -54,7 +54,7 @@ enum PhysicsCategory: UInt32 {
         case .none:
             return none.rawValue
         default:
-            assertionFailure("Doesn't have a category match (collision)")
+            assertionFailure("Doesn't have a collision category match")
             return none.rawValue
         }
     }

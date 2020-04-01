@@ -29,9 +29,9 @@ extension UIImage {
             context.rotate(by: .pi)
             context.translateBy(x: -size.width/2, y: 0)
             
-            let path = UIBezierPath(triangleIn: size)
+            let trajectory = UIBezierPath(triangleIn: size)
             color.setFill()
-            path.fill()
+            trajectory.fill()
         }
     }
     
@@ -56,9 +56,9 @@ extension UIImage {
             context.rotate(by: .pi)
             context.translateBy(x: -size.width/2, y: 0)
             
-            let path = UIBezierPath(pentagonWith: width)
+            let trajectory = UIBezierPath(pentagonWith: width)
             color.setFill()
-            path.fill()
+            trajectory.fill()
         }
     }
     

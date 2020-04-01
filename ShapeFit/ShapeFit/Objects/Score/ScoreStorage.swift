@@ -61,7 +61,7 @@ class ScoreStorage: SKSpriteNode {
         rightContainer.addChild(rightSubtitle)
     }
 
-    func createTitleLabel(_ text: String, fontSize: CGFloat) -> LPRFixedWidthLabelNode{
+    func createTitleLabel(_ text: String, fontSize: CGFloat) -> LPRFixedWidthLabelNode {
         let l = LPRFixedWidthLabelNode(text: text)
         l.fontName = AppDefines.FontName.defaultLight
         l.fontSize = fontSize

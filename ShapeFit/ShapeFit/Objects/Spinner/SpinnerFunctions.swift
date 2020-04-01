@@ -6,9 +6,10 @@
 //  Copyright © 2020 Ankith. All rights reserved.
 //
 
+
 import SpriteKit
 
-class SpinnerFunctions: SKShapeNode {
+class SpinnerPart: SKShapeNode {
     let dockingPosition: CGPoint
     private let type: ShapeType
     
@@ -17,8 +18,8 @@ class SpinnerFunctions: SKShapeNode {
         dockingPosition = (shape == .triangle ? CGPoint(x: 0, y: length / 2 - 8) : CGPoint(x: 0, y: length / 2))
         super.init()
         
-        let shapePath = shape.spinnerPath(size: CGSize(width: 2 * length / (1 + sqrt(2)), height: length))
-        activatePhysicsBody(shapePath)
+        let shapeTrajectory = shape.spinnerTrajectory(size: CGSize(width: 2 * length / (1 + sqrt(2)), height: length))
+        activatePhysicsBody(shapeTrajectory)
         
         if BUILD_MODE == .debug {
             let mark = SKSpriteNode(color: .lightGray, size: CGSize(width: 8, height: 8))

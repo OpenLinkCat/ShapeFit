@@ -11,10 +11,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     static var instance: AppDelegate { return UIApplication.shared.delegate as! AppDelegate }
-    static var mainGameViewController: MainGameViewController { return instance.mainGameViewController }
+    static var gameViewController: MainGameViewController { return instance.gameViewController }
     
     var window: UIWindow?
-    private lazy var mainGameViewController = MainGameViewController()
+    private lazy var gameViewController = MainGameViewController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -29,10 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.makeKeyAndVisible()
         window!.rootViewController = ScreenViewController()
         return true
-}
-        func applicationDidBecomeActive(_ application: UIApplication) {
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
         AppPersistence.matchesPlayedSinceLaunch = 0
-        if let gameScene = mainGameViewController.mainGameView.scene as? MainGameScene {
+        if let gameScene = gameViewController.gameView.scene as? MainGameScene {
             gameScene.updateTimer.lap()
         }
     }

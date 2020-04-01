@@ -9,7 +9,7 @@
 import SpriteKit
 import SpriteKitExtensions
 
-class ShareScene: SKScene {
+class ShareImageScene: SKScene {
     private let displayContent: StackNode!
     
     init(size: CGSize, score: Score?) {

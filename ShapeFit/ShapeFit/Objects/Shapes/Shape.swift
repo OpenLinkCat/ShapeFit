@@ -9,34 +9,31 @@
 import SpriteKit
 
 class Shape: SKSpriteNode {
-    // Play with CGSize numbers
-    // Play with time intervals
     static let defaultSize = CGSize(width: 50, height: 50)
-    var timeToDisappear: TimeInterval = 0
-    var disappearingTime: TimeInterval = 0.2
-    var moveTime: TimeInterval = 0.8
-    var failureNoticeTime: TimeInterval = 0.8
-    var shapeCreationTime: TimeInterval = 0.4
+    var moveDuration: TimeInterval = 0.8
+    var creationDuration: TimeInterval = 0.4
+    var disappearDuration: TimeInterval = 0.2
+    var waitToDisappearDuration: TimeInterval = 0
+    var failureDuration: TimeInterval = 0.8
     
-    enum Actions {
-        static let GameEnd = "Game End"
+    enum ActionKey {
+        static let isAboutToExplode = "isAboutToExplode"
         static let move = "move"
     }
+    
+    private(set) var actived = true
     let shapeType: ShapeType
+    private let shapeColors: SKColor
     let shapeName: String
-    private let shapeColor: SKColor
     private let shapeTrajectory: UIBezierPath
-    private(set) var activated = true
-    
-    // Initializing constructor
-    
+
     init(type: ShapeType) {
+        shapeType = type
+        shapeColors = type.color()
         shapeName = type.name()
         shapeTrajectory = type.trajectory()
-        shapeType = type
-        shapeColor = type.color()
         super.init(texture: nil, color: .clear, size: Shape.defaultSize)
-              
+        
         run(.setTexture(AppCache.instance.mainAtlas.textureNamed(type.textureName()), resize: true))
 
         if BUILD_MODE == .debug {
@@ -46,16 +43,14 @@ class Shape: SKSpriteNode {
             addChild(mark)
         }
     }
-
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+        
     func activatePhysicsBody() {
-        let path = shapeType.trajectory()
-        let physicsBody = SKPhysicsBody(polygonFrom: path.cgPath)
+        let trajectory = shapeType.trajectory()
+        let physicsBody = SKPhysicsBody(polygonFrom: trajectory.cgPath)
         let shapeCategory = PhysicsCategory.category(of: shapeType)
         physicsBody.categoryBitMask = shapeCategory.rawValue
         physicsBody.collisionBitMask = PhysicsCategory.collision(with: shapeCategory)
@@ -73,28 +68,28 @@ class Shape: SKSpriteNode {
     func countToExplode() {
         run(.sequence([.wait(forDuration: 1), .run({ () -> Void in
             self.failure()
-        })]), withKey: Actions.GameEnd)
+        })]), withKey: ActionKey.isAboutToExplode)
     }
     
     func releaseMe() {
-        let effect = SKTMoveEffect(node: self, duration: moveTime, startPosition: position, endPosition: CGPoint(x: 0, y: -scene!.size.height/2))
+        let effect = SKTMoveEffect(node: self, duration: moveDuration, startPosition: position, endPosition: CGPoint(x: 0, y: -scene!.size.height/2))
         effect.timingFunction = SKTTimingFunctionLinear
-        run(.actionWithEffect(effect), withKey: Actions.move)
+        run(.actionWithEffect(effect), withKey: ActionKey.move)
     }
     
     func create(_ completion: (() -> Void)? = nil) {
-        let appear: SKAction = .appearAnimated(self, time: CGFloat(shapeCreationTime), scale: 1)
+        let appear: SKAction = .appearAnimated(self, time: CGFloat(creationDuration), scale: 1)
 
         if let completion = completion { run(appear, completion: completion) }
         else { run(appear) }
 
         if let sound = AppCache.instance.creationSound {
-            run(.afterDelay(shapeCreationTime, performAction: sound))
+            run(.afterDelay(creationDuration, performAction: sound))
         }
     }
     
     func success(_ special: Bool, completion: (() -> Void)? = nil) {
-        activated = false
+        actived = false
         removeAllActions()
         
         if let sound = special ? AppCache.instance.successSoundSpecial : AppCache.instance.successSound {
@@ -102,24 +97,24 @@ class Shape: SKSpriteNode {
         }
         physicsBody = nil
 
-        let disappear: SKAction = .disappearAnimated(self, time: CGFloat(disappearingTime))
+        let disappear: SKAction = .disappearAnimated(self, time: CGFloat(disappearDuration))
         let sequence: SKAction = .sequence([disappear, .removeFromParent()])
-        if timeToDisappear > 0 {
-            run(.afterDelay(timeToDisappear, performAction: sequence))
+        if waitToDisappearDuration > 0 {
+            run(.afterDelay(waitToDisappearDuration, performAction: sequence))
         } else {
             run(sequence)
         }
     }
     
     func failure(_ completion: (() -> Void)? = nil) {
-        activated = false
+        actived = false
         removeAllActions()
         if let failure = AppCache.instance.failureSound { run(failure) }
         physicsBody = nil
         
-        let disappear: SKAction = .disappearAnimated(self, time: CGFloat(failureNoticeTime/2))
+        let disappear: SKAction = .disappearAnimated(self, time: CGFloat(failureDuration/2))
         
-        let sequence: SKAction = .sequence([.group([disappear, .wait(forDuration: failureNoticeTime*2)]), .removeFromParent()])
+        let sequence: SKAction = .sequence([.group([disappear, .wait(forDuration: failureDuration*2)]), .removeFromParent()])
 
         if let completion = completion {
             run(sequence, completion: completion)

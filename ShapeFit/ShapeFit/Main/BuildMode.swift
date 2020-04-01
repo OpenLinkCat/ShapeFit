@@ -12,4 +12,6 @@ enum BuildMode {
     case debug
     case release
 }
+
 var BUILD_MODE: BuildMode = .debug
+

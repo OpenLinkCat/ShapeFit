@@ -19,7 +19,6 @@ class Spinner: SKSpriteNode {
     private var up = true
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-    
     init() {
         let texture = SKTexture(circleOfRadius: frameSide, color: .mirageBlack)
         super.init(texture: texture, color: .clear, size: CGSize(width: 2.4 * frameSide, height: 2.4 * frameSide))
@@ -35,13 +34,14 @@ class Spinner: SKSpriteNode {
             let radius = frameSide / 2
             let rotation =  CGFloat(i) * section
             
-            let node = SpinnerFunctions(length: frameSide, shape: shape, color: .clear)
+            let node = SpinnerPart(length: frameSide, shape: shape, color: .clear)
             node.zRotation =  CGFloat(sectionsCount - i) * section
             node.position = CGPoint(x: radius * sin(rotation), y: radius * cos(rotation))
             node.zPosition = 10
             addChild(node)
             
-            shape.createBorder(onPath: line, size: lineSize)
+            shape.drawBorder(onPath: line, size: lineSize)
+
             line.apply(CGAffineTransform(translationX: 0, y: frameSide / 2))
             line.apply(CGAffineTransform(rotationAngle: .pi / 4))
             line.apply(CGAffineTransform(translationX: 0, y: -frameSide / 2))
@@ -59,7 +59,13 @@ class Spinner: SKSpriteNode {
         shapeNode.zPosition = 12
     }
     
-
+    func spinn(_ right: Bool, delay: Double = 0.2) {
+        if let act = soundFor(right) { run(act) }
+        if right { activedSection -= 1 }
+        else { activedSection += 1 }
+        snapTo(CGFloat(activedSection) * section, delay: delay)
+    }
+    
     private func snapTo(_ angle: CGFloat, delay: Double) {
         let isRotatingActionKey = "isRotatingActionKey"
         let effect = SKTRotateEffect(node: self, duration: delay, startAngle: self.zRotation, endAngle: angle)
@@ -68,16 +74,7 @@ class Spinner: SKSpriteNode {
         run(.actionWithEffect(effect), withKey: isRotatingActionKey)
     }
     
-
-     private func soundFor(_ right: Bool) -> SKAction? {
+    private func soundFor(_ right: Bool) -> SKAction? {
         return .playSoundFileIfEnabled("spinner_turn.wav", waitForCompletion: true)
     }
-     
-     func spin(_ right: Bool, delay: Double = 0.2) {
-         if let act = soundFor(right) { run(act) }
-         if right { activedSection -= 1 }
-         else { activedSection += 1 }
-         snapTo(CGFloat(activedSection) * section, delay: delay)
-     }
-
 }

@@ -19,7 +19,6 @@ class GameScoreDisplay: SKLabelNode {
     private let delay: CGFloat = 1
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-    
     override init() {
         super.init()
         self.fontName = AppDefines.FontName.defaultLight
@@ -35,7 +34,7 @@ class GameScoreDisplay: SKLabelNode {
         run(.appearAnimated(self, time: delay * 0.6))
     }
     
-    func TestDisplayNumber(_ number: Int) {
+    func TESTdisplayNumber(_ number: Int) {
         points = number
         setScale(1)
         alpha = 1

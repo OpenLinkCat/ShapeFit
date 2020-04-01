@@ -37,7 +37,6 @@ class GameGestures: SKNode {
     }
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-    
     init(right: Bool, radius: CGFloat) {
         self.radius = radius
         self.arrow = SKSpriteNode(texture: AppCache.instance.mainAtlas.textureNamed("game_arrow_right"))

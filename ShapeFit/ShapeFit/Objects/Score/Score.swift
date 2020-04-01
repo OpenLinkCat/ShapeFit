@@ -6,6 +6,8 @@
 //  Copyright © 2020 Ankith. All rights reserved.
 //
 
+import Foundation
+
 struct Score {
     var points = 0
     

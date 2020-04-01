@@ -11,7 +11,7 @@ import SpriteKit
 import SpriteKitExtensions
 
 class MainGameViewController: UIViewController {
-    var mainGameView: SKView { return view as! SKView }
+    var gameView: SKView { return view as! SKView }
     
     override func loadView() {
         let skView = SKView()
@@ -50,7 +50,7 @@ class MainGameViewController: UIViewController {
             gameView.presentScene(scene)
         #else
             let scene = InitialScene(score: nil)
-            mainGameView.presentScene(scene)
+            gameView.presentScene(scene)
         #endif
     }
 
@@ -61,12 +61,12 @@ class MainGameViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        if let scene = mainGameView.scene as? InitialScene {
-            scene.mainGameScene = nil
+        if let scene = gameView.scene as? InitialScene {
+            scene.gameScene = nil
         }
     }
     
     func gameEndedPresentAdAndInitialScene(_ scene: SKScene) {
-        mainGameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
+        gameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
     }
 }
