@@ -25,19 +25,6 @@ extension ShapeType {
         }
     }
     
-    func trajectory() -> UIBezierPath {
-        switch self{
-        case .circle:
-            return Circle.trajectory()
-        case .triangle:
-            return Triangle.trajectory()
-        case .square:
-            return Square.trajectory()
-        case .pentagon:
-            return Pentagon.trajectory()
-        }
-    }
-    
     func textureName() -> String {
         switch self {
         case .circle:
@@ -48,6 +35,19 @@ extension ShapeType {
             return "shape_square"
         case .pentagon:
             return "shape_pentagon"
+        }
+    }
+    
+    func trajectory() -> UIBezierPath {
+        switch self{
+        case .circle:
+            return Circle.trajectory()
+        case .triangle:
+            return Triangle.trajectory()
+        case .square:
+            return Square.trajectory()
+        case .pentagon:
+            return Pentagon.trajectory()
         }
     }
     

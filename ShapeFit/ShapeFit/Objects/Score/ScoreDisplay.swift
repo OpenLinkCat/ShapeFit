@@ -19,6 +19,7 @@ class GameScoreDisplay: SKLabelNode {
     private let delay: CGFloat = 1
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    
     override init() {
         super.init()
         self.fontName = AppDefines.FontName.defaultLight

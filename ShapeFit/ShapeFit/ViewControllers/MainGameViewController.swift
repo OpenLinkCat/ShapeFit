@@ -69,5 +69,4 @@ class MainGameViewController: UIViewController {
     func gameEndedPresentAdAndInitialScene(_ scene: SKScene) {
         mainGameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
     }
-    
 }

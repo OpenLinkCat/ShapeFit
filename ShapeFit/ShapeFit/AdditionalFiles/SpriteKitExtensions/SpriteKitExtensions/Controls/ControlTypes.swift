@@ -10,7 +10,7 @@ import SpriteKit
 
 public extension Control {
     
-    enum ControlEvent {
+    public enum ControlEvent {
         
         case touchDown
         case touchUpInside
@@ -93,7 +93,7 @@ public extension Control {
 
 
 public extension SKShapeNode {
-    convenience init(definition: Definition) {
+    public convenience init(definition: Definition) {
         self.init()
         self.redefine(definition)
     }
@@ -119,7 +119,7 @@ public extension SKShapeNode {
     
     // MARK: Shape Definition - Description
     
-    struct Definition {
+    public struct Definition {
         var path: CGPath
         var strokeColor: UIColor = SKColor.white
         var fillColor: UIColor = SKColor.clear

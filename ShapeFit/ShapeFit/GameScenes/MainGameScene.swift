@@ -20,8 +20,8 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
     private let gameSceneNodeContainer = SKNode()
     private let gradientNode: SKSpriteNode
     
-    private var animationApear: (() -> Void)? = nil
-    private var animationDisapear: (() -> Void)? = nil
+    private var animationAppear: (() -> Void)? = nil
+    private var animationDisappear: (() -> Void)? = nil
     
     private var firstShape:Bool = true
     private var gameEndedDoOnce = false
@@ -75,6 +75,7 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+                                      
     init(isEndlessGame: Bool = false) {
         ShapeType.lastRandomShapeIndex = 0
         let newSize = MainGameScene.calculateSceneSize()
@@ -131,7 +132,7 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
             isWaitingForLeft = true
         }
 
-        animationApear = {  [weak self] in
+        animationAppear = {  [weak self] in
             if let strongSelf = self {
                 var start = CGPoint(x: 0, y: strongSelf.spinner.position.y - strongSelf.spinner.size.height)
 
@@ -150,7 +151,7 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
 
-        animationDisapear = { [weak self] in
+        animationDisappear = { [weak self] in
             if let strongSelf = self {
                 var end: CGPoint = CGPoint(x: 0, y: strongSelf.spinner.position.y - strongSelf.spinner.size.height)
 
@@ -181,7 +182,7 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
             AppDelegate.mainGameViewController.mainGameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
         }
         
-        if let anim = animationDisapear {
+        if let anim = animationDisappear {
             anim()
             afterDelay(0.36) { present() }
         } else {
@@ -191,7 +192,7 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
 
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        animationApear?()
+        animationAppear?()
 
         afterDelay(0.8) {
             AppCache.instance.backgroundCrops?.forEach { $0.1.removeFromParent() }

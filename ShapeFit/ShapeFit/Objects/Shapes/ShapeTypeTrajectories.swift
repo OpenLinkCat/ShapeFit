@@ -14,7 +14,7 @@ extension ShapeType {
     // MARK: Circle
     enum Circle {
         private static let radius: CGFloat = 40
-        private static let percentage: CGFloat = 0.4
+        private static let percentage: CGFloat = 0.46
         
         // Creates the the trajectory/path of the Circle
         static func trajectory() -> UIBezierPath {
@@ -25,7 +25,7 @@ extension ShapeType {
         
         // The trajectory/path for the spinner
         static func spinnerTrajectory(size: CGSize) -> UIBezierPath {
-            let newRadius = radius * 1.05
+            let newRadius = radius * 1.06
             let trajectory = UIBezierPath()
             let inside = 2 * newRadius * percentage
             let angle = 2 * acos(1-inside / newRadius)
@@ -47,7 +47,7 @@ extension ShapeType {
         // Creating a Border for the circle
         
         static func createBorder(onTrajectory trajectory: UIBezierPath, size: CGSize) {
-            let newRadius = radius * 1.05
+            let newRadius = radius * 1.06
             let inside = 2 * newRadius * 0.5
             let angle = 2 * acos(1-inside/newRadius)
             
@@ -64,8 +64,8 @@ extension ShapeType {
     // MARK: Triangle
     
     enum Triangle {
-        private static let base: CGFloat = 80
-        private static let height: CGFloat = 70
+        private static let base: CGFloat = 90
+        private static let height: CGFloat = 80
         private static let percentage: CGFloat = 0.66
         
         static func trajectory() -> UIBezierPath {

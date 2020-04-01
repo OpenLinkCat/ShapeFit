@@ -11,12 +11,12 @@ import SpriteKit
 class Shape: SKSpriteNode {
     // Play with CGSize numbers
     // Play with time intervals
-    static let defaultSize = CGSize(width: 60, height: 60)
+    static let defaultSize = CGSize(width: 50, height: 50)
     var timeToDisappear: TimeInterval = 0
     var disappearingTime: TimeInterval = 0.2
-    var moveTime: TimeInterval = 0.5
-    var failureNoticeTime: TimeInterval = 0.2
-    var shapeCreationTime: TimeInterval = 0.3
+    var moveTime: TimeInterval = 0.8
+    var failureNoticeTime: TimeInterval = 0.8
+    var shapeCreationTime: TimeInterval = 0.4
     
     enum Actions {
         static let GameEnd = "Game End"

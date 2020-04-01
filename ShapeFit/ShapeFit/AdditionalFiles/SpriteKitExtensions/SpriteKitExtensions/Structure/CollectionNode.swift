@@ -84,7 +84,7 @@ open class CollectionNode: SKSpriteNode {
 
 
 public extension SKNode {
-    func removeNodeFromCollection(_ withRefresh: Bool = true) {
+    public func removeNodeFromCollection(_ withRefresh: Bool = true) {
         if let collection = self.parent as? CollectionNode {
             collection.remove(node: self, reload: withRefresh)
         } else {

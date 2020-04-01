@@ -11,25 +11,27 @@ import StoreKit
 import SpriteKitExtensions
 
 class InitialScene: SKScene {
+    private var animationDisappear: (() -> Void)? = nil
+    private var animationAppear: (() -> Void)? = nil
+    
+    var mainGameScene: MainGameScene?
+    private var score: Score?
+    
     private var isInitialScene: Bool {
         get {
             return self.score == nil
         }
     }
-    private var animationDisappear: (() -> Void)? = nil
-    private var animationAppear: (() -> Void)? = nil
-    private var score: Score?
-    var mainGameScene: MainGameScene?
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         animationAppear?()
-        defer {
+        do {
             if mainGameScene == nil {
-                AppCache.instance.initializeInitialScreenBackgroundTexture(screenSize: MainGameScene.calculateSceneSize(view.frame.size))
+                AppCache.instance.initializeGameTextures(with: MainGameScene.calculateSceneSize(view.frame.size))
                 mainGameScene = MainGameScene()
             }
-            if AppPersistence.highScorePoints > 10 && AppPersistence.matchesPlayedSinceLaunch > 8 {
+            if AppPersistence.highScorePoints > 10 && AppPersistence.matchesPlayedSinceLaunch > 6 {
                 SKStoreReviewController.requestReview()
             }
         }
@@ -265,7 +267,7 @@ class InitialScene: SKScene {
                 activityVC.popoverPresentationController?.sourceRect = CGRect(origin: CGPoint(x: gameView.frame.size.width/2, y: gameView.frame.size.height/2), size: .zero)
                 activityVC.popoverPresentationController?.permittedArrowDirections = .up
                 
-                defer {
+                do {
                     AppDelegate.mainGameViewController.present(activityVC, animated: true, completion: nil)
                 }
             })

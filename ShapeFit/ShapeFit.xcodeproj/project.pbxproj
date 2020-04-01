@@ -34,6 +34,10 @@
 		B274E2F9243141FF0084E0B6 /* spinner_turn.wav in Resources */ = {isa = PBXBuildFile; fileRef = B274E2F3243141FF0084E0B6 /* spinner_turn.wav */; };
 		B29457C1242DB77A00E9E4D7 /* SpriteKitExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CCABD0242C3D7F00B09164 /* SpriteKitExtensions.framework */; };
 		B29457C2242DB77A00E9E4D7 /* SpriteKitExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CCABD0242C3D7F00B09164 /* SpriteKitExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B29D9B262431A3DD008F36B6 /* VAGRoundedStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B29D9B232431A3DD008F36B6 /* VAGRoundedStd-Bold.otf */; };
+		B29D9B272431A3DD008F36B6 /* VAGRoundedStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B29D9B242431A3DD008F36B6 /* VAGRoundedStd-Black.otf */; };
+		B29D9B282431A3DD008F36B6 /* VAGRoundedStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B29D9B252431A3DD008F36B6 /* VAGRoundedStd-Light.otf */; };
+		B29D9B2C2431AD36008F36B6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B29D9B2E2431AD36008F36B6 /* Localizable.strings */; };
 		B2A4A799242BCA15004E9BB1 /* MainGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A4A798242BCA15004E9BB1 /* MainGameViewController.swift */; };
 		B2A4A79B242BCA50004E9BB1 /* UIViewResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A4A79A242BCA50004E9BB1 /* UIViewResize.swift */; };
 		B2A4A79D242BCBFF004E9BB1 /* Doubles+Floats.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A4A79C242BCBFF004E9BB1 /* Doubles+Floats.swift */; };
@@ -136,6 +140,10 @@
 		B29457AF242DACFF00E9E4D7 /* Switch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Switch.swift; sourceTree = "<group>"; };
 		B29457B0242DACFF00E9E4D7 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		B29457B1242DAD0000E9E4D7 /* ControlTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlTypes.swift; sourceTree = "<group>"; };
+		B29D9B232431A3DD008F36B6 /* VAGRoundedStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedStd-Bold.otf"; sourceTree = "<group>"; };
+		B29D9B242431A3DD008F36B6 /* VAGRoundedStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedStd-Black.otf"; sourceTree = "<group>"; };
+		B29D9B252431A3DD008F36B6 /* VAGRoundedStd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VAGRoundedStd-Light.otf"; sourceTree = "<group>"; };
+		B29D9B2D2431AD36008F36B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B2A4A798242BCA15004E9BB1 /* MainGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameViewController.swift; sourceTree = "<group>"; };
 		B2A4A79A242BCA50004E9BB1 /* UIViewResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewResize.swift; sourceTree = "<group>"; };
 		B2A4A79C242BCBFF004E9BB1 /* Doubles+Floats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Doubles+Floats.swift"; sourceTree = "<group>"; };
@@ -247,6 +255,9 @@
 		B274E2E624313F480084E0B6 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				B29D9B242431A3DD008F36B6 /* VAGRoundedStd-Black.otf */,
+				B29D9B232431A3DD008F36B6 /* VAGRoundedStd-Bold.otf */,
+				B29D9B252431A3DD008F36B6 /* VAGRoundedStd-Light.otf */,
 				B274E2E724313F490084E0B6 /* Roboto-Light.ttf */,
 				B274E2E824313F490084E0B6 /* Roboto-Bold.ttf */,
 				B274E2E924313F490084E0B6 /* Roboto-Black.ttf */,
@@ -401,6 +412,7 @@
 				B274E2E624313F480084E0B6 /* Fonts */,
 				B2296A322427F15100362B05 /* Assets.xcassets */,
 				B2296A342427F15100362B05 /* LaunchScreen.storyboard */,
+				B29D9B2E2431AD36008F36B6 /* Localizable.strings */,
 			);
 			path = AppResources;
 			sourceTree = "<group>";
@@ -542,13 +554,17 @@
 			files = (
 				B274E2F4243141FF0084E0B6 /* shape_failure.wav in Resources */,
 				B274E2F8243141FF0084E0B6 /* button_up.wav in Resources */,
+				B29D9B262431A3DD008F36B6 /* VAGRoundedStd-Bold.otf in Resources */,
+				B29D9B2C2431AD36008F36B6 /* Localizable.strings in Resources */,
 				B2A4A7A8242BD29B004E9BB1 /* Screen.xib in Resources */,
 				B274E2F9243141FF0084E0B6 /* spinner_turn.wav in Resources */,
 				B2296A332427F15100362B05 /* Assets.xcassets in Resources */,
 				B274E2EB24313F490084E0B6 /* Roboto-Bold.ttf in Resources */,
 				B274E2EA24313F490084E0B6 /* Roboto-Light.ttf in Resources */,
+				B29D9B282431A3DD008F36B6 /* VAGRoundedStd-Light.otf in Resources */,
 				B274E2F6243141FF0084E0B6 /* shape_special.wav in Resources */,
 				B274E2F7243141FF0084E0B6 /* button_down.wav in Resources */,
+				B29D9B272431A3DD008F36B6 /* VAGRoundedStd-Black.otf in Resources */,
 				B2296A362427F15100362B05 /* LaunchScreen.storyboard in Resources */,
 				B274E2F5243141FF0084E0B6 /* shape_success.wav in Resources */,
 				B274E2EC24313F490084E0B6 /* Roboto-Black.ttf in Resources */,
@@ -630,6 +646,14 @@
 				B2296A352427F15100362B05 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B29D9B2E2431AD36008F36B6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B29D9B2D2431AD36008F36B6 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -757,6 +781,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3U3SNC9LRZ;
 				INFOPLIST_FILE = ShapeFit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -778,6 +803,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3U3SNC9LRZ;
 				INFOPLIST_FILE = ShapeFit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

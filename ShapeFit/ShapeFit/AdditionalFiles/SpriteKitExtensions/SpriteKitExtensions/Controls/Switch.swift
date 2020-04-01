@@ -10,7 +10,6 @@ import SpriteKit
 
 open class Switch: Control {
 
-    
     // MARK: Convenience Inits
     
     public convenience init(normalText: String, selectedText: String?) {
