@@ -33,8 +33,8 @@ class ScoreStorage: SKSpriteNode {
         addChild(leftContainer)
         addChild(rightContainer)
     
-        let leftTitle = createTitleLabel(NSLocalizedString("PANEL_HIGH_SCORE", comment: ""), fontSize: 0.2 * leftContainer.size.height)
-        let rightTitle = createTitleLabel(NSLocalizedString("PANEL_SCORE", comment: ""), fontSize: 0.2 * rightContainer.size.height)
+        let leftTitle = createTitleLabel(NSLocalizedString("PANEL_HIGH_SCORE", comment: ""), fontSize: 0.16 * leftContainer.size.height)
+        let rightTitle = createTitleLabel(NSLocalizedString("PANEL_SCORE", comment: ""), fontSize: 0.3 * rightContainer.size.height)
     
         leftContainer.addChild(leftTitle)
         rightContainer.addChild(rightTitle)

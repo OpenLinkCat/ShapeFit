@@ -1,33 +1,33 @@
 {
   "images" : [
     {
+      "filename" : "ScoreStorage (3).png",
       "idiom" : "iphone",
-      "filename" : "score_container.png",
       "scale" : "1x"
     },
     {
+      "filename" : "ScoreStorage (3)-1.png",
       "idiom" : "iphone",
-      "filename" : "score_container@2x.png",
       "scale" : "2x"
     },
     {
+      "filename" : "ScoreStorage (3)-2.png",
       "idiom" : "iphone",
-      "filename" : "score_container@3x.png",
       "scale" : "3x"
     },
     {
+      "filename" : "ScoreStorage (3)-3.png",
       "idiom" : "ipad",
-      "filename" : "score_container~ipad.png",
       "scale" : "1x"
     },
     {
+      "filename" : "ScoreStorage (3)-4.png",
       "idiom" : "ipad",
-      "filename" : "score_container@2x~ipad.png",
       "scale" : "2x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

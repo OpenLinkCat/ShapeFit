@@ -107,7 +107,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B2296A222427F14F00362B05 /* ShapeFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2296A222427F14F00362B05 /* ShapeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2296A252427F14F00362B05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2296A322427F15100362B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2296A352427F15100362B05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 		B2296A232427F14F00362B05 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B2296A222427F14F00362B05 /* ShapeFit.app */,
+				B2296A222427F14F00362B05 /* ShapeIt.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -494,7 +494,7 @@
 			);
 			name = ShapeFit;
 			productName = ShapeFit;
-			productReference = B2296A222427F14F00362B05 /* ShapeFit.app */;
+			productReference = B2296A222427F14F00362B05 /* ShapeIt.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -787,7 +787,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = monkeyank.ShapeFit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ShapeIt;
 				SWIFT_OBJC_BRIDGING_HEADER = "ShapeFit/AdditionalFiles/LPRFixedWidthLabelNode/ShapeFit-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -809,7 +809,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = monkeyank.ShapeFit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ShapeIt;
 				SWIFT_OBJC_BRIDGING_HEADER = "ShapeFit/AdditionalFiles/LPRFixedWidthLabelNode/ShapeFit-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
