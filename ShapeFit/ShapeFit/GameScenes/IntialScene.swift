@@ -11,8 +11,8 @@ import SpriteKitExtensions
 import StoreKit
 
 class InitialScene: SKScene {
-    private var animationApear: (() -> Void)? = nil
-    private var animationDisapear: (() -> Void)? = nil
+    private var animationAppear: (() -> Void)? = nil
+    private var animationDisappear: (() -> Void)? = nil
     
     var gameScene: MainGameScene?
     private var score: Score?
@@ -24,7 +24,7 @@ class InitialScene: SKScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        animationApear?()
+        animationAppear?()
         defer {
             if gameScene == nil {
                 AppCache.instance.initializeGameTextures(with: MainGameScene.calculateSceneSize(view.frame.size))
@@ -39,7 +39,7 @@ class InitialScene: SKScene {
     
     override func willMove(from view: SKView) {
         super.willMove(from: view)
-        animationDisapear?()
+        animationDisappear?()
     }
     
     init(score: Score?) {
@@ -122,7 +122,7 @@ class InitialScene: SKScene {
         track.zPosition = 400
         addChild(track)
         
-        animationApear = { [weak self] in
+        animationAppear = { [weak self] in
             if let strongSelf = self {
                 let start1 = bottomStack.position - CGPoint(x: 0 , y: 2 * strongSelf.convert(.zero, from: bottomStack).y)
                 let ef1 = SKTMoveEffect(node: bottomStack, duration: 0.8, startPosition: start1, endPosition: bottomStack.position)
@@ -140,7 +140,7 @@ class InitialScene: SKScene {
             }
         }
         
-        animationDisapear = { [weak self] in
+        animationDisappear = { [weak self] in
             if let strongSelf = self {
                 let end1 = bottomStack.position - CGPoint(x: 0 , y: 2 * strongSelf.convert(.zero, from: bottomStack).y)
                 let ef1 = SKTMoveEffect(node: bottomStack, duration: 0.2, startPosition: bottomStack.position, endPosition: end1)
@@ -176,7 +176,7 @@ class InitialScene: SKScene {
             AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toGame)
         }
         
-        if let animation = animationDisapear {
+        if let animation = animationDisappear {
             animation()
             afterDelay(0.36) { present() }
         } else {

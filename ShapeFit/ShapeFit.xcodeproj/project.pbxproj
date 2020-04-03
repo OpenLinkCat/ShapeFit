@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,7 +34,6 @@
 		B274E2F9243141FF0084E0B6 /* spinner_turn.wav in Resources */ = {isa = PBXBuildFile; fileRef = B274E2F3243141FF0084E0B6 /* spinner_turn.wav */; };
 		B29457C1242DB77A00E9E4D7 /* SpriteKitExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CCABD0242C3D7F00B09164 /* SpriteKitExtensions.framework */; };
 		B29457C2242DB77A00E9E4D7 /* SpriteKitExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2CCABD0242C3D7F00B09164 /* SpriteKitExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B29D9B262431A3DD008F36B6 /* VAGRoundedStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B29D9B232431A3DD008F36B6 /* VAGRoundedStd-Bold.otf */; };
 		B29D9B272431A3DD008F36B6 /* VAGRoundedStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B29D9B242431A3DD008F36B6 /* VAGRoundedStd-Black.otf */; };
 		B29D9B282431A3DD008F36B6 /* VAGRoundedStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B29D9B252431A3DD008F36B6 /* VAGRoundedStd-Light.otf */; };
 		B29D9B2C2431AD36008F36B6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B29D9B2E2431AD36008F36B6 /* Localizable.strings */; };
@@ -204,7 +203,6 @@
 			children = (
 				B2296A242427F14F00362B05 /* ShapeFit */,
 				B2296A232427F14F00362B05 /* Products */,
-				B29457BA242DB4F900E9E4D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -276,13 +274,6 @@
 				B274E2F3243141FF0084E0B6 /* spinner_turn.wav */,
 			);
 			path = Sounds;
-			sourceTree = "<group>";
-		};
-		B29457BA242DB4F900E9E4D7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B2A4A79E242BD122004E9BB1 /* UpdateTimer */ = {
@@ -504,7 +495,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Ankith;
 				TargetAttributes = {
 					B2296A212427F14F00362B05 = {
@@ -554,7 +545,6 @@
 			files = (
 				B274E2F4243141FF0084E0B6 /* shape_failure.wav in Resources */,
 				B274E2F8243141FF0084E0B6 /* button_up.wav in Resources */,
-				B29D9B262431A3DD008F36B6 /* VAGRoundedStd-Bold.otf in Resources */,
 				B29D9B2C2431AD36008F36B6 /* Localizable.strings in Resources */,
 				B2A4A7A8242BD29B004E9BB1 /* Screen.xib in Resources */,
 				B274E2F9243141FF0084E0B6 /* spinner_turn.wav in Resources */,
@@ -780,6 +770,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3U3SNC9LRZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/GoogleAppMeasurement/Frameworks",
+					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current",
+				);
 				INFOPLIST_FILE = ShapeFit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -802,6 +797,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3U3SNC9LRZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/GoogleAppMeasurement/Frameworks",
+					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current",
+				);
 				INFOPLIST_FILE = ShapeFit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (

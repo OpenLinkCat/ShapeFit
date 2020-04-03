@@ -22,6 +22,7 @@ class MainGameViewController: UIViewController {
         skView.showsPhysics = BUILD_MODE == .debug
         skView.ignoresSiblingOrder = true
         view = skView
+        isModalInPresentation = true
     }
     
     override func viewDidLoad() {

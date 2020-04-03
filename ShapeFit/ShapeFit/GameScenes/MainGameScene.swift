@@ -14,14 +14,13 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
     private let spinner = Spinner()
     private let scoreBoard = GameScoreDisplay()
     let isEndlessGame: Bool
-
     private let rightArrow = GameGestures(right: true, radius: 80)
     private let leftArrow = GameGestures(right: false, radius: 80)
     private let gameSceneNodeContainer = SKNode()
     private let gradientNode: SKSpriteNode
     
-    private var animationApear: (() -> Void)? = nil
-    private var animationDisapear: (() -> Void)? = nil
+    private var animationAppear: (() -> Void)? = nil
+    private var animationDisappear: (() -> Void)? = nil
     
     private var firstShape:Bool = true
     private var gameEndedDoOnce = false
@@ -131,7 +130,7 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
             isWaitingForLeft = true
         }
 
-        animationApear = {  [weak self] in
+        animationAppear = {  [weak self] in
             if let strongSelf = self {
                 var start = CGPoint(x: 0, y: strongSelf.spinner.position.y - strongSelf.spinner.size.height)
 
@@ -150,7 +149,7 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
 
-        animationDisapear = { [weak self] in
+        animationDisappear = { [weak self] in
             if let strongSelf = self {
                 var end: CGPoint = CGPoint(x: 0, y: strongSelf.spinner.position.y - strongSelf.spinner.size.height)
 
@@ -181,7 +180,7 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
             AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
         }
         
-        if let anim = animationDisapear {
+        if let anim = animationDisappear {
             anim()
             afterDelay(0.36) { present() }
         } else {
@@ -191,7 +190,7 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
 
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        animationApear?()
+        animationAppear?()
 
         afterDelay(0.8) {
             AppCache.instance.backgroundCrops?.forEach { $0.1.removeFromParent() }
@@ -319,14 +318,14 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
         let moveDiv: TimeInterval = 0.6
         let creationDiv: TimeInterval = (1 - moveDiv) * 0.6
         let disappearDiv: TimeInterval = (1 - moveDiv - creationDiv) * 0.9
-        let waitToDisapearDiv: TimeInterval = 1 - moveDiv - creationDiv - disappearDiv
+        let waitToDisappearDiv: TimeInterval = 1 - moveDiv - creationDiv - disappearDiv
         
         let delay = GameTiming.delayBetweenLaunches(scoreBoard.points)
         
         node.moveDuration = moveDiv * delay
         node.creationDuration = creationDiv * delay
         node.disappearDuration = disappearDiv * delay
-        node.waitToDisappearDuration = waitToDisapearDiv * delay
+        node.waitToDisappearDuration = waitToDisappearDiv * delay
         
         
         node.create() { [weak self] in
