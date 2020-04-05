@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30D2F9A5CB86438AD05A1764 /* Pods_ShapeFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A5516C07C075D36280E8A0 /* Pods_ShapeFit.framework */; };
 		B2296A262427F14F00362B05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2296A252427F14F00362B05 /* AppDelegate.swift */; };
 		B2296A332427F15100362B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2296A322427F15100362B05 /* Assets.xcassets */; };
 		B2296A362427F15100362B05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2296A342427F15100362B05 /* LaunchScreen.storyboard */; };
@@ -23,6 +24,7 @@
 		B262EB3124286CCD0065787C /* ShapeTypeTrajectories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3024286CCD0065787C /* ShapeTypeTrajectories.swift */; };
 		B262EB3324286D5C0065787C /* ShapeTypeProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3224286D5C0065787C /* ShapeTypeProperties.swift */; };
 		B262EB3524286D700065787C /* ShapeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B262EB3424286D700065787C /* ShapeTypes.swift */; };
+		B2674A1F24381D6C006A4AE3 /* VAGRoundedStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B29D9B232431A3DD008F36B6 /* VAGRoundedStd-Bold.otf */; };
 		B274E2EA24313F490084E0B6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B274E2E724313F490084E0B6 /* Roboto-Light.ttf */; };
 		B274E2EB24313F490084E0B6 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B274E2E824313F490084E0B6 /* Roboto-Bold.ttf */; };
 		B274E2EC24313F490084E0B6 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B274E2E924313F490084E0B6 /* Roboto-Black.ttf */; };
@@ -106,6 +108,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A28300338ECA2A60FDA6533C /* Pods-ShapeFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeFit.debug.xcconfig"; path = "Target Support Files/Pods-ShapeFit/Pods-ShapeFit.debug.xcconfig"; sourceTree = "<group>"; };
 		B2296A222427F14F00362B05 /* ShapeIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShapeIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2296A252427F14F00362B05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2296A322427F15100362B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,6 +187,8 @@
 		B2CCABCB242C3D7F00B09164 /* SpriteKitExtensions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SpriteKitExtensions.xcodeproj; sourceTree = "<group>"; };
 		B2CCABD6242C400400B09164 /* StackNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackNode.swift; sourceTree = "<group>"; };
 		B2CCABD8242C402900B09164 /* CollectionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNode.swift; sourceTree = "<group>"; };
+		C1A5516C07C075D36280E8A0 /* Pods_ShapeFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShapeFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E30AABA5AFC2FA7637E0627F /* Pods-ShapeFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeFit.release.xcconfig"; path = "Target Support Files/Pods-ShapeFit/Pods-ShapeFit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,17 +197,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				B29457C1242DB77A00E9E4D7 /* SpriteKitExtensions.framework in Frameworks */,
+				30D2F9A5CB86438AD05A1764 /* Pods_ShapeFit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23FEE6117E5DA12B9BA4965A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A28300338ECA2A60FDA6533C /* Pods-ShapeFit.debug.xcconfig */,
+				E30AABA5AFC2FA7637E0627F /* Pods-ShapeFit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7385CE14C4589E4D21F1DF95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1A5516C07C075D36280E8A0 /* Pods_ShapeFit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B2296A192427F14F00362B05 = {
 			isa = PBXGroup;
 			children = (
 				B2296A242427F14F00362B05 /* ShapeFit */,
 				B2296A232427F14F00362B05 /* Products */,
+				23FEE6117E5DA12B9BA4965A /* Pods */,
+				7385CE14C4589E4D21F1DF95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -473,10 +498,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2296A3A2427F15100362B05 /* Build configuration list for PBXNativeTarget "ShapeFit" */;
 			buildPhases = (
+				D5CD547B41289C09E6074D17 /* [CP] Check Pods Manifest.lock */,
 				B2296A1E2427F14F00362B05 /* Sources */,
 				B2296A1F2427F14F00362B05 /* Frameworks */,
 				B2296A202427F14F00362B05 /* Resources */,
 				B29457C3242DB77A00E9E4D7 /* Embed Frameworks */,
+				708D2A5EA590C6EA7A4FC74D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -543,6 +570,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2674A1F24381D6C006A4AE3 /* VAGRoundedStd-Bold.otf in Resources */,
 				B274E2F4243141FF0084E0B6 /* shape_failure.wav in Resources */,
 				B274E2F8243141FF0084E0B6 /* button_up.wav in Resources */,
 				B29D9B2C2431AD36008F36B6 /* Localizable.strings in Resources */,
@@ -562,6 +590,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		708D2A5EA590C6EA7A4FC74D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShapeFit/Pods-ShapeFit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShapeFit/Pods-ShapeFit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShapeFit/Pods-ShapeFit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5CD547B41289C09E6074D17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShapeFit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B2296A1E2427F14F00362B05 /* Sources */ = {
@@ -765,6 +835,7 @@
 		};
 		B2296A3B2427F15100362B05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A28300338ECA2A60FDA6533C /* Pods-ShapeFit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -792,6 +863,7 @@
 		};
 		B2296A3C2427F15100362B05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E30AABA5AFC2FA7637E0627F /* Pods-ShapeFit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

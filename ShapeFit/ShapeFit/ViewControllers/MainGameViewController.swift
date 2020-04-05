@@ -9,10 +9,11 @@
 import UIKit
 import SpriteKit
 import SpriteKitExtensions
+import GoogleMobileAds
 
-class MainGameViewController: UIViewController {
+class MainGameViewController: UIViewController, GADInterstitialDelegate {
     var gameView: SKView { return view as! SKView }
-    
+    var interstitial: GADInterstitial!
     override func loadView() {
         let skView = SKView()
         skView.frame = UIScreen.main.bounds
@@ -27,7 +28,14 @@ class MainGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["0cb001d58e0b1bc5da12b120ac160b52" ]
+        /*
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers =
+        [ "00008020-000E28A41479002E" ]
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        let request = GADRequest()
+        interstitial.load(request)
+ */
         Control.defaultTouchUpSoundFileName = "button_up.wav"
         Control.defaultTouchDownSoundFileName = "button_down.wav"
         _ = SKAction.reloadSoundEffectsSettings()
@@ -66,8 +74,28 @@ class MainGameViewController: UIViewController {
             scene.gameScene = nil
         }
     }
-    
+    func createAd() -> GADInterstitial {
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial.delegate = self
+        let request = GADRequest()
+        interstitial.load(request)
+        return interstitial
+    }
     func gameEndedPresentAdAndInitialScene(_ scene: SKScene) {
-        gameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
+        if interstitial != nil {
+            if (interstitial.isReady == true){
+                interstitial.present(fromRootViewController:self)
+                AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
+            } else {
+                print("ad wasn't ready")
+                interstitial = createAd()
+                AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
+            }
+        } else {
+            print("ad wasn't ready")
+            interstitial = createAd()
+            AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
+        }
+        
     }
 }

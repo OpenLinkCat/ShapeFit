@@ -10,7 +10,7 @@ import SpriteKit
 
 class Shape: SKSpriteNode {
     static let defaultSize = CGSize(width: 50, height: 50)
-    var moveDuration: TimeInterval = 0.4
+    var moveDuration: TimeInterval = 0.35
     var creationDuration: TimeInterval = 0.4
     var disappearDuration: TimeInterval = 0.2
     var waitToDisappearDuration: TimeInterval = 0

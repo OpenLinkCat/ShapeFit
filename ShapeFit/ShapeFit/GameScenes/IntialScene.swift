@@ -25,7 +25,7 @@ class InitialScene: SKScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         animationAppear?()
-        defer {
+        do {
             if gameScene == nil {
                 AppCache.instance.initializeGameTextures(with: MainGameScene.calculateSceneSize(view.frame.size))
                 gameScene = MainGameScene()
@@ -269,7 +269,7 @@ class InitialScene: SKScene {
             activityVC.popoverPresentationController?.sourceRect = CGRect(origin: CGPoint(x: gameView.frame.size.width/2, y: gameView.frame.size.height/2), size: .zero)
             activityVC.popoverPresentationController?.permittedArrowDirections = .up
             
-            defer {
+            do {
                 AppDelegate.gameViewController.present(activityVC, animated: true, completion: nil)
             }
         })

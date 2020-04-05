@@ -1,0 +1,6 @@
+framework module Pods_ShapeFit {
+  umbrella header "Pods-ShapeFit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -177,7 +177,8 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
 
     private func removeUIandPresentScene(_ scene: SKScene) {
         func present() {
-            AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
+            MainGameViewController().gameEndedPresentAdAndInitialScene(scene)
+           
         }
         
         if let anim = animationDisappear {
@@ -315,11 +316,10 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
         node.zPosition = Constant.zPosShape
         addChildToContainer(node)
         
-        let moveDiv: TimeInterval = 0.6
+        let moveDiv: TimeInterval = 0.5
         let creationDiv: TimeInterval = (1 - moveDiv) * 0.6
         let disappearDiv: TimeInterval = (1 - moveDiv - creationDiv) * 0.9
         let waitToDisappearDiv: TimeInterval = 1 - moveDiv - creationDiv - disappearDiv
-        
         let delay = GameTiming.delayBetweenLaunches(scoreBoard.points)
         
         node.moveDuration = moveDiv * delay
