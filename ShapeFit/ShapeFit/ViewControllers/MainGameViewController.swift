@@ -28,10 +28,8 @@ class MainGameViewController: UIViewController, GADInterstitialDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
-        let request = GADRequest()
-        interstitial.load(request)
- 
+        interstitial = createAndLoadInterstitial()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showInterstitial), name:NSNotification.Name(rawValue: "showInterAd"), object: nil);
         Control.defaultTouchUpSoundFileName = "button_up.wav"
         Control.defaultTouchDownSoundFileName = "button_down.wav"
         _ = SKAction.reloadSoundEffectsSettings()
@@ -70,36 +68,25 @@ class MainGameViewController: UIViewController, GADInterstitialDelegate {
             scene.gameScene = nil
         }
     }
-    
-    func createAd() -> GADInterstitial {
-        // Don't have to specify device identifiers for IOS Simulators, but need for physical devices (ignore warning for simulator)
+    @objc func showInterstitial(){
+        if (interstitial!.isReady) {
+            self.interstitial.present(fromRootViewController: self)
+        }else{
+            print("ad not ready?")
+        }
+    }
 
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+    func createAndLoadInterstitial() -> GADInterstitial {
+        print("making ad")
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/5135589807")
         interstitial.delegate = self
         let request = GADRequest()
         interstitial.load(request)
         return interstitial
     }
-    
-    func gameEndedPresentAdAndInitialScene(_ scene: SKScene) {
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
-        interstitial.delegate = self
-        let request = GADRequest()
-        interstitial.load(request)
-        if interstitial != nil {
-            if (interstitial.isReady == true){
-                interstitial.present(fromRootViewController:self)
-                AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
-            } else {
-                print("ad wasn't ready1")
-                interstitial = createAd()
-                AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
-            }
-        } else {
-            print("ad wasn't ready2")
-            interstitial = createAd()
-            AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
-        }
-        
+
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitial = createAndLoadInterstitial()
     }
+    
 }

@@ -36,7 +36,7 @@ enum AppPersistence {
         }
     }
     
-    private static var matchesPlayedSinceTheBeginningOfTime: Int {
+    static var matchesPlayedSinceTheBeginningOfTime: Int {
         set {
             UserDefaults.standard.setValue(newValue, forKey: #function)
             UserDefaults.standard.synchronize()

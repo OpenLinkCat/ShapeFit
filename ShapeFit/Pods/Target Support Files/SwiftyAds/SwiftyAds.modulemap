@@ -1,0 +1,6 @@
+framework module SwiftyAds {
+  umbrella header "SwiftyAds-umbrella.h"
+
+  export *
+  module * { export * }
+}

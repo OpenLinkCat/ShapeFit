@@ -177,7 +177,10 @@ class MainGameScene: SKScene, SKPhysicsContactDelegate {
 
     private func removeUIandPresentScene(_ scene: SKScene) {
         func present() {
-            MainGameViewController().gameEndedPresentAdAndInitialScene(scene)
+            if((AppPersistence.matchesPlayedSinceTheBeginningOfTime)%5 == 0){
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showInterAd"), object: nil)
+            }
+            AppDelegate.gameViewController.gameView.presentScene(scene, transition: AppDefines.Transition.toInitial)
            
         }
         
