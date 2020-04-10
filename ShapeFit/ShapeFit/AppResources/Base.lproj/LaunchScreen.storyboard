@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="5iY-r1-Y9w">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="k9c-2V-b0H" sceneMemberID="viewController">
+                <viewController id="k9c-2V-b0H" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yh7-eI-cKv"/>
                         <viewControllerLayoutGuide type="bottom" id="cTi-aA-DFD"/>
