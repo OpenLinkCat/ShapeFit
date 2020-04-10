@@ -847,7 +847,7 @@
 					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current",
 				);
 				INFOPLIST_FILE = ShapeFit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -875,7 +875,7 @@
 					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/Frameworks/GoogleMobileAdsFramework-Current",
 				);
 				INFOPLIST_FILE = ShapeFit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -23,7 +23,11 @@ class MainGameViewController: UIViewController, GADInterstitialDelegate {
         skView.showsPhysics = BUILD_MODE == .debug
         skView.ignoresSiblingOrder = true
         view = skView
-        isModalInPresentation = true
+        if #available(iOS 13.0, *) {
+            isModalInPresentation = true
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     override func viewDidLoad() {
@@ -78,7 +82,7 @@ class MainGameViewController: UIViewController, GADInterstitialDelegate {
 
     func createAndLoadInterstitial() -> GADInterstitial {
         print("making ad")
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/5135589807")
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9253085643503323/9034537011")
         interstitial.delegate = self
         let request = GADRequest()
         interstitial.load(request)
