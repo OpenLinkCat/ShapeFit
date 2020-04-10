@@ -6,28 +6,25 @@
   Copyright © 2020 Ankith. All rights reserved.
 */
 
-"DOWNLOAD_BANNER"          = "download_banner_en";
-"SHARE_MESSAGE_COMPLETE"   = "I've just scored %d %@ in #ShapeFit. My high score is %d, can you beat that?";
+
 "SHARE_MESSAGE_COMPLETE_POINTS" = "points";
 "SHARE_MESSAGE_COMPLETE_POINT"  = "point";
-"SHARE_MESSAGE_TOP"        = "My high score is %d! Can you beat that? #ShapeFit";
+"SHARE_MESSAGE_COMPLETE"        = "Well I just scored %d %@ in #Shapezoid. My high score is %d, can you beat me?";
+"SHARE_MESSAGE_TOP"             = "Well my high score is %d! Can you beat me? #Shapezoid";
 
-"REMOVE_ADS"               = "Remove Ads";
+"RATE_TITLE"         = "Want to review this game? =)";
+"RATE_MESSAGE"       = "This will be very quick. Rating our app is very helpful";
+"RATE_CONFIRM"       = "Rate";
+"RATE_CANCEL"        = "Cancel";
 
-"TUTORIAL_TAP" = "TAP";
-"MSG_READY" = "Ready?";
+"HIGH_SCORE"         = "HIGH SCORE";
+"SCORE"              = "SCORE";
 
-
-"RATE_ALERT_TITLE"         = "Do you want to review the game? =)";
-
-"RATE_ALERT_MESSAGE"       = "This is very important to us! It will not take more than a minute. Thank you for your support!";
-
-"RATE_ALERT_YES"           = "Rate";
-
-"RATE_ALERT_CANCEL"        = "Cancel";
-
+"TUTORIAL"      = "TAP";
+"READY_MESSAGE" = "Ready?";
+"DOWNLOAD"      = "download";
 
 
-"PANEL_HIGH_SCORE"         = "HIGH SCORE";
 
-"PANEL_SCORE"              = "SCORE";
+
+

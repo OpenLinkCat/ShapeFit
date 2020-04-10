@@ -34,7 +34,7 @@ class MainGameViewController: UIViewController, GADInterstitialDelegate {
         Control.defaultTouchDownSoundFileName = "button_down.wav"
         _ = SKAction.reloadSoundEffectsSettings()
         
-        let overlayView = UIImageView(image: UIImage(named: "bg1"))
+        let overlayView = UIImageView(image: UIImage(named: "texture"))
         overlayView.contentMode = .scaleAspectFill
         overlayView.isUserInteractionEnabled = false
         overlayView.alpha = 0.13

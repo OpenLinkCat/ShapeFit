@@ -46,12 +46,12 @@ class GameScoreDisplay: SKLabelNode {
     }
     
     func tapTutorial() {
-        text = NSLocalizedString("TUTORIAL_TAP", comment: "")
+        text = NSLocalizedString("TUTORIAL", comment: "")
         run(.appearAnimated(self, time: 0.3))
     }
     
     func letsGo(_ wait: TimeInterval = 1.4, completion: @escaping (() -> Void)) {
-        text = NSLocalizedString("MSG_READY", comment: "")
+        text = NSLocalizedString("READY_MESSAGE", comment: "")
         
         run(.sequence([.appearAnimated(self, time: 0.3), .wait(forDuration: wait)]), completion: {
             self.removeScoreLabel()

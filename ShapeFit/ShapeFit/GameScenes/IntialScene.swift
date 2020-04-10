@@ -186,7 +186,7 @@ class InitialScene: SKScene {
     
     // MARK: Buttons and banners
     
-    private lazy var bannerLogo: SKSpriteNode = SKSpriteNode(texture: AppCache.instance.interfaceAtlas.textureNamed("shapefit_logo"))
+    private lazy var bannerLogo: SKSpriteNode = SKSpriteNode(texture: AppCache.instance.interfaceAtlas.textureNamed("shapezoid_logo"))
     private lazy var scoreStorage: ScoreStorage = ScoreStorage(texture: AppCache.instance.interfaceAtlas.textureNamed("score_storage"))
     
     private lazy var playButton: Button = {
@@ -247,7 +247,7 @@ class InitialScene: SKScene {
             let shareImageSize = CGSize(width: 600, height: 400)
             let shareImageView = SKView(frame: CGRect(origin: .zero, size: shareImageSize))
             
-            let shareImageOverlayView = UIImageView(image: UIImage(named: "bg1"))
+            let shareImageOverlayView = UIImageView(image: UIImage(named: "texture"))
             shareImageOverlayView.frame = shareImageView.frame
             shareImageOverlayView.contentMode = .scaleAspectFill
             shareImageOverlayView.isUserInteractionEnabled = false
@@ -283,9 +283,9 @@ class InitialScene: SKScene {
         bt.addClosure(.touchUpInside, target: self, closure: { (target, sender) -> () in
             let sc = target.score
             
-            let alert = UIAlertController(title: NSLocalizedString("RATE_ALERT_TITLE", comment: ""), message: NSLocalizedString("RATE_ALERT_MESSAGE", comment: ""), preferredStyle: .alert)
+            let alert = UIAlertController(title: NSLocalizedString("RATE_TITLE", comment: ""), message: NSLocalizedString("RATE_MESSAGE", comment: ""), preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: NSLocalizedString("RATE_ALERT_YES", comment: ""), style: .default, handler: { (action:UIAlertAction) -> Void in
+            alert.addAction(UIAlertAction(title: NSLocalizedString("RATE_CONFIRM", comment: ""), style: .default, handler: { (action:UIAlertAction) -> Void in
                 
                 let appID = AppDefines.Constants.appStoreID
                 let rateURLString = "itms-apps://itunes.apple.com/us/app/\(appID)?action=write-review"
@@ -295,7 +295,7 @@ class InitialScene: SKScene {
                 }
             }))
             
-            alert.addAction(UIAlertAction(title: NSLocalizedString("RATE_ALERT_CANCEL", comment: ""), style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("RATE_CANCEL", comment: ""), style: .cancel, handler: nil))
             AppDelegate.gameViewController.present(alert, animated: true, completion: nil)
         })
         return bt

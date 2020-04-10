@@ -23,12 +23,12 @@ class ShareImageScene: SKScene {
         gradientNode.zPosition = 1
         addChild(gradientNode)
         
-        let logo = SKSpriteNode(texture: SKTexture(imageNamed: "shapefit_logo_banner.png"))
+        let logo = SKSpriteNode(texture: SKTexture(imageNamed: "shapezoid_logo_banner.png"))
         
         let scoreC = ScoreStorage(texture: SKTexture(imageNamed: "score_storage_banner.png"))
         scoreC.setScore(score ?? Score(points: 0))
         
-        let str = NSLocalizedString("DOWNLOAD_BANNER", comment: "")
+        let str = NSLocalizedString("DOWNLOAD", comment: "")
         let downl = SKSpriteNode(texture: SKTexture(imageNamed: str))
 
         
