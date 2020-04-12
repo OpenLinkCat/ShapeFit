@@ -14,9 +14,9 @@ enum AppDefines {
     //TODO: Add Constants
     
     enum Constants {
-        static let mainLeaderboardID = "ShapeFitLeaderboard"
-        static let appStoreID = ""
-        static let appStoreLink = ""
+        static let mainLeaderboardID = "grp.Shapezoid"
+        static let appStoreID = "id1507022672"
+        static let appStoreLink = "https://itunes.apple.com/us/app/id1507022672"
         static let isiPad = UIDevice.current.userInterfaceIdiom == .pad
         static let isiPhoneX: Bool = UIDevice().userInterfaceIdiom == .phone && UIScreen.main.nativeBounds.height == 2436
     }

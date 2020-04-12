@@ -68,15 +68,15 @@ enum AppPersistence {
     }
     
     private static func reportNewAchievement(points: Int) {
-        GCHelper.sharedInstance.reportAchievementIdentifier("10POINTS", percent: 100 * Double(points) / 10)
-        GCHelper.sharedInstance.reportAchievementIdentifier("20POINTS", percent: 100 * Double(points) / 20)
-        GCHelper.sharedInstance.reportAchievementIdentifier("30POINTS", percent: 100 * Double(points) / 30)
-        GCHelper.sharedInstance.reportAchievementIdentifier("40POINTS", percent: 100 * Double(points) / 40)
-        GCHelper.sharedInstance.reportAchievementIdentifier("50POINTS", percent: 100 * Double(points) / 50)
-        GCHelper.sharedInstance.reportAchievementIdentifier("60POINTS", percent: 100 * Double(points) / 60)
-        GCHelper.sharedInstance.reportAchievementIdentifier("70POINTS", percent: 100 * Double(points) / 70)
-        GCHelper.sharedInstance.reportAchievementIdentifier("80POINTS", percent: 100 * Double(points) / 80)
-        GCHelper.sharedInstance.reportAchievementIdentifier("90POINTS", percent: 100 * Double(points) / 90)
-        GCHelper.sharedInstance.reportAchievementIdentifier("100POINTS", percent: 100 * Double(points) / 100)
+        GCHelper.sharedInstance.reportAchievementIdentifier("grp.10Points", percent: 100 * Double(points) / 10)
+        GCHelper.sharedInstance.reportAchievementIdentifier("grp.20Points", percent: 100 * Double(points) / 20)
+        GCHelper.sharedInstance.reportAchievementIdentifier("grp.30Points", percent: 100 * Double(points) / 30)
+        GCHelper.sharedInstance.reportAchievementIdentifier("grp.40Points", percent: 100 * Double(points) / 40)
+        GCHelper.sharedInstance.reportAchievementIdentifier("grp.Shapezoid_50Points", percent: 100 * Double(points) / 50)
+        GCHelper.sharedInstance.reportAchievementIdentifier("grp.60Points", percent: 100 * Double(points) / 60)
+        GCHelper.sharedInstance.reportAchievementIdentifier("grp.70Points", percent: 100 * Double(points) / 70)
+        GCHelper.sharedInstance.reportAchievementIdentifier("grp.80Points", percent: 100 * Double(points) / 80)
+        GCHelper.sharedInstance.reportAchievementIdentifier("grp.90Points", percent: 100 * Double(points) / 90)
+        GCHelper.sharedInstance.reportAchievementIdentifier("grp.Shapezoid_100Points", percent: 100 * Double(points) / 100)
     }
 }
