@@ -74,6 +74,7 @@
 		B2CCABA9242C381D00B09164 /* SoundExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABA8242C381D00B09164 /* SoundExtension.swift */; };
 		B2CCABAB242C38BB00B09164 /* DisappearandAppearExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABAA242C38BB00B09164 /* DisappearandAppearExtension.swift */; };
 		B2CCABAE242C392100B09164 /* GCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CCABAD242C392100B09164 /* GCHelper.swift */; };
+		B2DB194924440B6D00E8919A /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DB194824440B6D00E8919A /* SettingsScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +188,7 @@
 		B2CCABCB242C3D7F00B09164 /* SpriteKitExtensions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SpriteKitExtensions.xcodeproj; sourceTree = "<group>"; };
 		B2CCABD6242C400400B09164 /* StackNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackNode.swift; sourceTree = "<group>"; };
 		B2CCABD8242C402900B09164 /* CollectionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNode.swift; sourceTree = "<group>"; };
+		B2DB194824440B6D00E8919A /* SettingsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
 		C1A5516C07C075D36280E8A0 /* Pods_ShapeFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShapeFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30AABA5AFC2FA7637E0627F /* Pods-ShapeFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShapeFit.release.xcconfig"; path = "Target Support Files/Pods-ShapeFit/Pods-ShapeFit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -417,6 +419,7 @@
 				B2CCABA6242C373400B09164 /* IntialScene.swift */,
 				B24DBFFC242ECC18002CAFEA /* MainGameScene.swift */,
 				B25174EF24300B0D00286385 /* ShareScene.swift */,
+				B2DB194824440B6D00E8919A /* SettingsScene.swift */,
 			);
 			path = GameScenes;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				B2A4A7A0242BD131004E9BB1 /* UpdateTimer.swift in Sources */,
 				B24DBFFD242ECC18002CAFEA /* MainGameScene.swift in Sources */,
 				B24DC014242ED581002CAFEA /* LPRFixedWidthLabelNode.m in Sources */,
+				B2DB194924440B6D00E8919A /* SettingsScene.swift in Sources */,
 				B2ABFFF7242B088300F5E06A /* AppColors.swift in Sources */,
 				B2CCABA7242C373400B09164 /* IntialScene.swift in Sources */,
 				B2A4A7AA242BD2A7004E9BB1 /* ScreenViewController.swift in Sources */,
